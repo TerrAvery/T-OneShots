@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "SplashScreen",
   "gdVersion": {
     "build": 213,
     "major": 5,
@@ -33,7 +33,7 @@
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
+      "backgroundImageResourceName": "assets\\sprites\\misc\\loading\\loading.png",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0,
@@ -43,12 +43,12 @@
       "progressBarMaxWidth": 200,
       "progressBarMinWidth": 40,
       "progressBarWidthPercent": 30,
-      "showGDevelopSplash": true,
-      "showProgressBar": true
+      "showGDevelopSplash": false,
+      "showProgressBar": false
     },
     "watermark": {
       "placement": "bottom-left",
-      "showWatermark": true
+      "showWatermark": false
     },
     "authorIds": [],
     "authorUsernames": [],
@@ -63,7 +63,17 @@
     "currentPlatform": "GDevelop JS platform"
   },
   "resources": {
-    "resources": [],
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/loading/loading.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\loading\\loading.png",
+        "smoothed": false,
+        "userAdded": false
+      }
+    ],
     "resourceFolders": []
   },
   "objects": [],
@@ -76,8 +86,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "SplashScreen",
+      "name": "SplashScreen",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
