@@ -1,0 +1,14 @@
+{
+  "associatedLayout": "SplashScreen",
+  "lastChangeTimeStamp": 0,
+  "name": "Main",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "FightMechanics"
+    }
+  ]
+}

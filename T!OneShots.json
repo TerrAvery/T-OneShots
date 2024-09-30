@@ -37,7 +37,7 @@
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0,
-      "minDuration": 1.5,
+      "minDuration": 5,
       "progressBarColor": 16777215,
       "progressBarHeight": 20,
       "progressBarMaxWidth": 200,
@@ -236,6 +236,16 @@
         "name": "assets\\sprites\\fighthud\\fighthud5.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/sfx/txt/SND_TXT2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\txt\\SND_TXT2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -492,14 +502,180 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "ParagraphText",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "AutoTyping",
+          "type": "AutoTyping::AutoTyping",
+          "Text": "Text",
+          "Interval": 0.025,
+          "CharacterJustAdded": false,
+          "FullText": "",
+          "TypedText": ""
+        }
+      ],
+      "content": {
+        "text": "* Paragraph 1",
+        "opacity": 255,
+        "scale": 2,
+        "fontSize": 20,
+        "tint": "255;255;255",
+        "bitmapFontResourceName": "assets\\bitmap\\8bitoperator\\8BitOperator.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\8bitoperator\\8BitOperator.png",
+        "align": "left",
+        "wordWrap": true
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player1",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\soul\\soul.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "ClientName",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "CHARA",
+        "opacity": 255,
+        "scale": 1.5,
+        "fontSize": 20,
+        "tint": "255;255;255",
+        "bitmapFontResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.png",
+        "align": "left",
+        "wordWrap": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "ClientLV",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "LV 1",
+        "opacity": 255,
+        "scale": 1.5,
+        "fontSize": 20,
+        "tint": "255;255;255",
+        "bitmapFontResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.png",
+        "align": "left",
+        "wordWrap": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "ClientHP",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "20 / 20",
+        "opacity": 255,
+        "scale": 1.5,
+        "fontSize": 20,
+        "tint": "255;255;255",
+        "bitmapFontResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.png",
+        "align": "left",
+        "wordWrap": true
+      }
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
       {
+        "folderName": "Player Soul",
+        "children": [
+          {
+            "objectName": "Player1"
+          }
+        ]
+      },
+      {
         "folderName": "Fight Hud",
         "children": [
+          {
+            "objectName": "ParagraphText"
+          },
+          {
+            "objectName": "ClientName"
+          },
+          {
+            "objectName": "ClientLV"
+          },
+          {
+            "objectName": "ClientHP"
+          },
           {
             "objectName": "FightHUD"
           }
@@ -508,7 +684,42 @@
     ]
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "paragraphTextValue",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "enemyID",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "playerStats",
+      "type": "structure",
+      "children": [
+        {
+          "folded": true,
+          "name": "HP",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "name": "LV",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "maxHP",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    }
+  ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -530,10 +741,18 @@
   "externalEvents": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/main"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/fightmechanics"
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/autotyping"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/updatechecker"
