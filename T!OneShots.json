@@ -354,6 +354,25 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/battlebox/battlebox.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\battlebox\\battlebox.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bgm/battlemusic/mu_battle1.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\bgm\\battlemusic\\mu_battle1.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -882,6 +901,157 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BattleBox",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": -256,
+            "thickness": 6
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\battlebox\\battlebox.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 33,
+                        "y": 0
+                      },
+                      {
+                        "x": 33,
+                        "y": 1
+                      },
+                      {
+                        "x": 0,
+                        "y": 1
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 33
+                      },
+                      {
+                        "x": 0,
+                        "y": 33
+                      }
+                    ],
+                    [
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 33,
+                        "y": 0
+                      },
+                      {
+                        "x": 33,
+                        "y": 33
+                      },
+                      {
+                        "x": 32,
+                        "y": 33
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 32
+                      },
+                      {
+                        "x": 33,
+                        "y": 32
+                      },
+                      {
+                        "x": 33,
+                        "y": 33
+                      },
+                      {
+                        "x": 0,
+                        "y": 33
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "var",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "CHARA",
+        "opacity": 255,
+        "scale": 1.5,
+        "fontSize": 20,
+        "tint": "255;255;255",
+        "bitmapFontResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.png",
+        "align": "left",
+        "wordWrap": true
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -898,6 +1068,14 @@
       {
         "folderName": "Fight Hud",
         "children": [
+          {
+            "folderName": "Battle Box",
+            "children": [
+              {
+                "objectName": "BattleBox"
+              }
+            ]
+          },
           {
             "folderName": "Health",
             "children": [
@@ -920,6 +1098,9 @@
               },
               {
                 "objectName": "ClientName"
+              },
+              {
+                "objectName": "var"
               },
               {
                 "objectName": "ParagraphText"
