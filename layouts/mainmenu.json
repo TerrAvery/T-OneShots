@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.9901680147497853,
+    "zoomFactor": 1.1306316110252708,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -870,11 +870,28 @@
                     },
                     {
                       "type": {
-                        "value": "KeyPressed"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "",
-                        "z"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "z"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Return"
+                          ]
+                        }
                       ]
                     },
                     {
@@ -924,6 +941,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Settings",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -943,11 +961,28 @@
                     },
                     {
                       "type": {
-                        "value": "KeyPressed"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "",
-                        "z"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "z"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Return"
+                          ]
+                        }
                       ]
                     },
                     {
@@ -978,6 +1013,15 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PushScene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Config\""
+                      ]
                     }
                   ]
                 }
@@ -989,6 +1033,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Quit",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1008,20 +1053,37 @@
                     },
                     {
                       "type": {
-                        "value": "KeyPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "z"
-                      ]
-                    },
-                    {
-                      "type": {
                         "inverted": true,
                         "value": "Multiplayer::IsLobbiesWindowOpen"
                       },
                       "parameters": [
                         "="
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "z"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Return"
+                          ]
+                        }
                       ]
                     },
                     {
@@ -1471,6 +1533,10 @@
     {
       "name": "Animation",
       "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "AutoTyping",
+      "type": "AutoTyping::AutoTyping"
     },
     {
       "name": "Effect",

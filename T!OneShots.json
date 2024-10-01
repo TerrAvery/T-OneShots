@@ -246,6 +246,114 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/fighthud/health.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\fighthud\\health.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/fighthud/healthbackdrop.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\fighthud\\healthbackdrop.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/ttf/8bitoperator_jve.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets\\ttf\\8bitoperator_jve.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx/generic/snd_save.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\generic\\snd_save.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/easteregg/duuzy/duuzyhorse7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\easteregg\\duuzy\\duuzyhorse7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx/eastereggs/duuzy/Screams_Male_03.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\eastereggs\\duuzy\\Screams_Male_03.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -648,6 +756,132 @@
         "align": "left",
         "wordWrap": true
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Health",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\fighthud\\health.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 21
+                      },
+                      {
+                        "x": 0,
+                        "y": 21
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "HealthRed",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\fighthud\\healthbackdrop.png",
+                  "points": [
+                    {
+                      "name": "HPText",
+                      "x": 14,
+                      "y": 0
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 21
+                      },
+                      {
+                        "x": 0,
+                        "y": 21
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -665,16 +899,32 @@
         "folderName": "Fight Hud",
         "children": [
           {
-            "objectName": "ParagraphText"
+            "folderName": "Health",
+            "children": [
+              {
+                "objectName": "Health"
+              },
+              {
+                "objectName": "HealthRed"
+              }
+            ]
           },
           {
-            "objectName": "ClientName"
-          },
-          {
-            "objectName": "ClientLV"
-          },
-          {
-            "objectName": "ClientHP"
+            "folderName": "Fonts",
+            "children": [
+              {
+                "objectName": "ClientHP"
+              },
+              {
+                "objectName": "ClientLV"
+              },
+              {
+                "objectName": "ClientName"
+              },
+              {
+                "objectName": "ParagraphText"
+              }
+            ]
           },
           {
             "objectName": "FightHUD"
@@ -692,13 +942,7 @@
       "value": 0
     },
     {
-      "folded": true,
-      "name": "enemyID",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "name": "playerStats",
+      "name": "singleplayerStats",
       "type": "structure",
       "children": [
         {
@@ -716,6 +960,18 @@
           "name": "maxHP",
           "type": "number",
           "value": 20
+        },
+        {
+          "folded": true,
+          "name": "playerName",
+          "type": "string",
+          "value": "Chara"
+        },
+        {
+          "folded": true,
+          "name": "soulColor",
+          "type": "number",
+          "value": 0
         }
       ]
     }
@@ -749,6 +1005,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/draggablephysics"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/autotyping"

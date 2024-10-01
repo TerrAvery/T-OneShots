@@ -324,6 +324,10 @@
       "type": "AnimatableCapability::AnimatableBehavior"
     },
     {
+      "name": "AutoTyping",
+      "type": "AutoTyping::AutoTyping"
+    },
+    {
       "name": "Effect",
       "type": "EffectCapability::EffectBehavior"
     },
