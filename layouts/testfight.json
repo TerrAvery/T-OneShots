@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.8945316718652845,
+    "zoomFactor": 1.3317797678232068,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -32,7 +32,7 @@
       "folded": true,
       "name": "enemyName",
       "type": "string",
-      "value": "Froggit"
+      "value": "Menacing Dummy"
     },
     {
       "folded": true,
@@ -100,7 +100,7 @@
           "folded": true,
           "name": "checkDesc",
           "type": "string",
-          "value": "Life is difficult for this enemy."
+          "value": "It has a menacing aura."
         }
       ]
     }
@@ -263,17 +263,147 @@
       "name": "var",
       "persistentUuid": "e449a775-1545-49c9-95f5-c105f3f0887f",
       "width": 0,
-      "x": 26,
-      "y": 17,
+      "x": -21,
+      "y": -48,
       "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Enemy",
+      "persistentUuid": "c5c58c64-c1d8-4f25-baf4-3295f3610faa",
+      "width": 0,
+      "x": -203,
+      "y": 52,
+      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
     }
   ],
-  "objects": [],
+  "objects": [
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Enemy",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "testEnemy",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\testEnemy\\testenemy_idle.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "testEnemyHurt",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\testEnemy\\testenemy_hurt.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "objectsFolderStructure": {
-    "folderName": "__ROOT"
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "objectName": "Enemy"
+      }
+    ]
   },
   "events": [
     {
@@ -285,6 +415,53 @@
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Enemy Position",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCenterX"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "=",
+                    "320"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "=",
+                    "128"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
         {
           "colorB": 228,
           "colorG": 176,
@@ -382,7 +559,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "FIGHT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -392,7 +568,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Config",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -430,7 +605,7 @@
                             "ParagraphText",
                             "Text",
                             "=",
-                            "\"* \" + enemyName"
+                            "\"* * \" + enemyName"
                           ]
                         },
                         {
@@ -910,7 +1085,7 @@
                             "ParagraphText",
                             "Text",
                             "=",
-                            "\"* \" + enemyName"
+                            "\"* * \" + enemyName"
                           ]
                         },
                         {
@@ -943,6 +1118,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Selecting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -1098,7 +1274,7 @@
                                     "ParagraphText",
                                     "Text",
                                     "=",
-                                    "\"* Check\""
+                                    "\"* * Check\""
                                   ]
                                 },
                                 {
@@ -1587,7 +1763,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "MERCY",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1738,6 +1913,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Spare",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -1947,6 +2123,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Input",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -2080,7 +2257,7 @@
                               "parameters": [
                                 "hudSelection.currentSelection",
                                 "=",
-                                "1"
+                                "3"
                               ]
                             },
                             {
@@ -3278,7 +3455,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Dialogue Strings",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3350,7 +3526,7 @@
                         "ParagraphText",
                         "Text",
                         "=",
-                        "\"* Froggit hopped close!\""
+                        "\"* You are not surviving this.\""
                       ]
                     }
                   ]

@@ -373,6 +373,34 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/testEnemy/testenemy_idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\testEnemy\\testenemy_idle.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/testEnemy/testenemy_hurt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\testEnemy\\testenemy_hurt.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bgm/battlemusic/mu_menacing.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\bgm\\battlemusic\\mu_menacing.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1126,6 +1154,18 @@
       "name": "singleplayerStats",
       "type": "structure",
       "children": [
+        {
+          "folded": true,
+          "name": "ATK",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "DEF",
+          "type": "number",
+          "value": 1
+        },
         {
           "folded": true,
           "name": "HP",
