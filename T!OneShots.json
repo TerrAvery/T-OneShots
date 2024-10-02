@@ -556,6 +556,28 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Explosion3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion3.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/c693a024a868728da3e9e91c9d23513306582bda6ba10191afc24d6c5667dd5e_Explosion3.png",
+          "name": "Explosion3.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/vfx/spare_particle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\vfx\\spare_particle.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2068,11 +2090,64 @@
           ]
         }
       ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "ceade84d2cc0571dc97ba3ad034dc7b7766670668e8a16c247d32a8a4c0f55ed",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 150,
+      "emitterForceMin": 150,
+      "flow": 800,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "SpareDust",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 15,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 0.5,
+      "particleLifeTimeMin": 0.5,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 100,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 1,
+      "rendererParam2": 1,
+      "rendererType": "Quad",
+      "tank": 10,
+      "textureParticleName": "assets\\sprites\\misc\\vfx\\spare_particle.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 10,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
+      {
+        "folderName": "Particles",
+        "children": [
+          {
+            "objectName": "SpareDust"
+          }
+        ]
+      },
       {
         "folderName": "Player Soul",
         "children": [

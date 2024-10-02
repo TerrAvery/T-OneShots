@@ -133,6 +133,12 @@
           "value": 0
         }
       ]
+    },
+    {
+      "folded": true,
+      "name": "attackTime",
+      "type": "number",
+      "value": 0.5
     }
   ],
   "instances": [
@@ -336,6 +342,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Player Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -688,7 +695,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Battle Box",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -740,7 +746,7 @@
                     "\"RegularWidth\"",
                     "564",
                     "\"linear\"",
-                    "1",
+                    "0.5",
                     ""
                   ]
                 },
@@ -754,7 +760,7 @@
                     "\"RegularHeight\"",
                     "130",
                     "\"linear\"",
-                    "1",
+                    "0.5",
                     ""
                   ]
                 },
@@ -768,7 +774,7 @@
                     "\"RegularPos\"",
                     "255",
                     "\"linear\"",
-                    "1",
+                    "0.5",
                     ""
                   ]
                 }
@@ -782,7 +788,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Menus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -951,11 +956,289 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Attack",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Attacks",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "TestMonster (Enemy ID = 0)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Attack 1",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.currentMenu",
+                                        "=",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
+                                        "paragraphTextValue",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "attackTime",
+                                        "=",
+                                        "5"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.currentMenu",
+                                        "=",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
+                                        "paragraphTextValue",
+                                        "=",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "attackTime",
+                                        "=",
+                                        "1"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Timer",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.attackOngoing",
+                                "True",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"timeToEnd\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.attackOngoing",
+                                "True",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CompareTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"timeToEnd\"",
+                                ">=",
+                                "attackTime"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.attackOngoing",
+                                "False",
+                                "="
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"normal\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AutoTyping::AutoTyping::RestartFromBeginning"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                "AutoTyping",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                "AutoTyping",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
                     {
                       "colorB": 228,
                       "colorG": 176,
@@ -1557,7 +1840,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Target Bar Movement",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -1567,7 +1849,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Damage Numbers",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -1690,6 +1971,23 @@
                                     "DamageText.Y() + 48",
                                     "\"easeInQuad\"",
                                     "0.5",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "0.8"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Delete"
+                                  },
+                                  "parameters": [
+                                    "DamageText",
                                     ""
                                   ]
                                 }
@@ -3761,7 +4059,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "MERCY",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3903,7 +4200,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Selecting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -3913,7 +4209,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Spare",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -3981,32 +4276,46 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "ActivateBehavior"
+                                "value": "SetStringVariable"
                               },
                               "parameters": [
-                                "ParagraphText",
-                                "AutoTyping",
-                                "yes"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "ParagraphText",
-                                "Text",
+                                "hudSelection.currentMenu",
                                 "=",
-                                "\"* YOU WON!\nYou earned 0 XP and 0 gold.\""
+                                "\"win\""
                               ]
                             },
                             {
                               "type": {
-                                "value": "AutoTyping::AutoTyping::RestartFromBeginning"
+                                "value": "Create"
                               },
                               "parameters": [
-                                "ParagraphText",
-                                "AutoTyping",
+                                "",
+                                "SpareDust",
+                                "Enemy.CenterX()",
+                                "Enemy.CenterY()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "Enemy",
+                                "Opacity",
+                                "=",
+                                "128"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\sfx\\generic\\snd_vaporized.wav",
+                                "",
+                                "",
                                 ""
                               ]
                             }
@@ -4401,7 +4710,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Moving between ACT buttons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4556,6 +4864,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Entering specific menus",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -5437,8 +5746,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
-      "name": "Dialogue Strings",
+      "name": "Dialogue Strings (Paragraph 1's ID is 0)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -5447,8 +5755,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "Enemy 0",
+          "name": "TestMonster (Enemy ID = 0)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -5457,7 +5764,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Paragraph 1",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -5520,6 +5826,72 @@
               "parameters": []
             },
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Paragraph 2",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "hudSelection.currentMenu",
+                        "=",
+                        "\"normal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "paragraphTextValue",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "ParagraphText",
+                        "Text",
+                        "=",
+                        "\"* \" + enemyName + \" stares directly at your SOUL.\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": []
@@ -5550,7 +5922,7 @@
                 "var",
                 "Text",
                 "=",
-                "hudSelection.currentMenu + \" \" + hudSelection.currentSelection + \" \" + hudSelection.page + NewLine() + \"amassed atk: \" + damageAmassed.totalValue + NewLine() + \"bar distance calculated: \" + damageAmassed.barDistance  + NewLine() + \"random decimal: \" + damageAmassed.randomDecimal + NewLine() + \"Monster HP: \" + enemyStats.HP"
+                "hudSelection.currentMenu + \" \" + hudSelection.currentSelection + \" \" + hudSelection.page + NewLine() + \"amassed atk: \" + damageAmassed.totalValue + NewLine() + \"bar distance calculated: \" + damageAmassed.barDistance  + NewLine() + \"random decimal: \" + damageAmassed.randomDecimal + NewLine() + \"Monster HP: \" + enemyStats.HP + NewLine() + hudSelection.attackOngoing"
               ]
             }
           ]
