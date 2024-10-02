@@ -1117,6 +1117,16 @@
                 "-",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"Config\"",
+                "\"soulColor\"",
+                "singleplayerStats.soulColor"
+              ]
             }
           ]
         },
@@ -1160,6 +1170,16 @@
                 "+",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"Config\"",
+                "\"soulColor\"",
+                "singleplayerStats.soulColor"
+              ]
             }
           ]
         },
@@ -1186,6 +1206,16 @@
                 "singleplayerStats.soulColor",
                 "=",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"Config\"",
+                "\"soulColor\"",
+                "singleplayerStats.soulColor"
               ]
             }
           ]
@@ -1214,6 +1244,16 @@
                 "=",
                 "6"
               ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"Config\"",
+                "\"soulColor\"",
+                "singleplayerStats.soulColor"
+              ]
             }
           ]
         }
@@ -1225,7 +1265,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Name Cap",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1566,6 +1605,16 @@
                     "singleplayerStats.playerName",
                     "=",
                     "NameBox.Text::Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"Config\"",
+                    "\"playerName\"",
+                    "singleplayerStats.playerName"
                   ]
                 },
                 {
