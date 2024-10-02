@@ -487,6 +487,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Misc Menus",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -496,6 +497,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Attack",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -902,7 +904,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "FIGHT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -921,6 +922,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Move to attack",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -1994,6 +1996,14 @@
                         },
                         {
                           "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "CenterCheck"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetCenterX"
                           },
                           "parameters": [
@@ -2503,6 +2513,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "ACT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2593,6 +2604,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Selecting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
