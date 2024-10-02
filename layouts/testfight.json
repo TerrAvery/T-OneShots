@@ -38,7 +38,7 @@
       "folded": true,
       "name": "enemySparable",
       "type": "boolean",
-      "value": false
+      "value": true
     },
     {
       "name": "hudSelection",
@@ -482,6 +482,153 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Extra Config",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Sparable",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.currentMenu",
+                            "=",
+                            "\"normal\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.currentMenu",
+                            "=",
+                            "\"win\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "enemySparable",
+                            "True",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.page",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.page",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "BitmapText::SetTint"
+                          },
+                          "parameters": [
+                            "ParagraphText",
+                            "\"255;255;0\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "enemySparable",
+                            "True",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"win\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"normal\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "BitmapText::SetTint"
+                          },
+                          "parameters": [
+                            "ParagraphText",
+                            "\"255;255;255\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": []
+            },
             {
               "colorB": 228,
               "colorG": 176,
