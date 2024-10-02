@@ -94,7 +94,7 @@
           "folded": true,
           "name": "HP",
           "type": "number",
-          "value": 30
+          "value": 60
         },
         {
           "folded": true,
@@ -392,7 +392,18 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCenterX"
+                  },
+                  "parameters": [
+                    "BattleBox",
+                    "=",
+                    "320"
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -476,6 +487,422 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "name": "Misc Menus",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Attack",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Config",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "folded": true,
+                          "name": "Soul Movement Config",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "StringVariable"
+                                  },
+                                  "parameters": [
+                                    "hudSelection.currentMenu",
+                                    "=",
+                                    "\"attack\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ActivateBehavior"
+                                  },
+                                  "parameters": [
+                                    "Player1",
+                                    "TopDownMovement",
+                                    "no"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "StringVariable"
+                                  },
+                                  "parameters": [
+                                    "hudSelection.currentMenu",
+                                    "=",
+                                    "\"attack\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ActivateBehavior"
+                                  },
+                                  "parameters": [
+                                    "Player1",
+                                    "TopDownMovement",
+                                    "yes"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "Player1",
+                                    "BattleBox",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SeparateFromObjects"
+                                  },
+                                  "parameters": [
+                                    "Player1",
+                                    "BattleBox",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.attackOngoing",
+                                "False",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.attackOngoing",
+                                "True",
+                                "="
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Target",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "TargetBar",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "CenterCheck",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetCenter"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "=",
+                                "BattleBox.CenterX()",
+                                "=",
+                                "BattleBox.CenterY()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "Player1",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Cache"
+                              },
+                              "parameters": [
+                                "ParagraphText"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectWidthTween2"
+                              },
+                              "parameters": [
+                                "BattleBox",
+                                "Tween",
+                                "\"BattleWidth\"",
+                                "150",
+                                "\"linear\"",
+                                "0.5",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Win",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Config",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"win\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                "AutoTyping",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                "Text",
+                                "=",
+                                "\"* YOU WON!\" + NewLine() +\n\"You earned 0 XP and 0 gold.\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                "=",
+                                "Player1.ZOrder() - 1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "CenterCheck",
+                                "Tween"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Target",
+                                "Tween"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "Tween"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "TargetBar",
+                                "Tween"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "ParagraphText",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StopSoundCanal"
+                              },
+                              "parameters": [
+                                "",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
               "name": "FIGHT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -494,6 +921,185 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "name": "Move to attack",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"fightEnemy\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "enemyStats.HP",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SceneInstancesCount"
+                              },
+                              "parameters": [
+                                "",
+                                "DamageText",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.8"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Dust the enemy on <= 0 HP",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"fightEnemy\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "enemyStats.HP",
+                                "<=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.8"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                              },
+                              "parameters": [
+                                "Enemy",
+                                "Tween",
+                                "\"DeathUp\"",
+                                "Enemy.Y() - 32",
+                                "\"easeInQuad\"",
+                                "1",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                              },
+                              "parameters": [
+                                "Enemy",
+                                "Tween",
+                                "\"DeathFade\"",
+                                "0",
+                                "\"easeInQuad\"",
+                                "0.8",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\sfx\\generic\\snd_vaporized.wav",
+                                "",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"win\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
                       "name": "Target Bar Movement",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -503,6 +1109,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Damage Numbers",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -534,7 +1141,19 @@
                                     "value": "Wait"
                                   },
                                   "parameters": [
-                                    "1"
+                                    "0.8"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "assets\\sfx\\generic\\snd_damage.wav",
+                                    "",
+                                    "",
+                                    ""
                                   ]
                                 },
                                 {
@@ -626,10 +1245,114 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Damage Calculation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Slash"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                                  },
+                                  "parameters": [
+                                    "Slash",
+                                    "Animation"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Delete"
+                                  },
+                                  "parameters": [
+                                    "Slash",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    "Animation",
+                                    "=",
+                                    "\"Hit\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "Slash",
+                                    "Slash",
+                                    "Enemy.X() + 36",
+                                    "Enemy.Y()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "assets\\sfx\\generic\\snd_laz.wav",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Target Bar Stuff"
+                            },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
@@ -871,7 +1594,7 @@
                                     "value": "Wait"
                                   },
                                   "parameters": [
-                                    "1"
+                                    "0.8"
                                   ]
                                 },
                                 {
@@ -1289,6 +2012,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Selecting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -1779,7 +2503,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "ACT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1789,6 +2512,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Config",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -1869,7 +2593,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Selecting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -1879,6 +2602,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Act Options",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -1888,6 +2612,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Check",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -1897,6 +2622,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Check Code",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -1959,6 +2685,58 @@
                                         "Text",
                                         "=",
                                         "\"* \" + enemyName + \" - ATK \" + enemyStats.ATK + \" DEF \" + enemyStats.DEF + NewLine() + \"* \" + enemyStats.checkDesc"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.currentMenu",
+                                        "=",
+                                        "\"checkingEnemy\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AutoTyping::AutoTyping::IsFinished"
+                                      },
+                                      "parameters": [
+                                        "ParagraphText",
+                                        "AutoTyping",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "KeyPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "z"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetStringVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.currentMenu",
+                                        "=",
+                                        "\"attack\""
                                       ]
                                     }
                                   ]
@@ -2138,6 +2916,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Input",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -2523,6 +3302,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Config",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -2824,42 +3604,12 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "AutoTyping::AutoTyping::RestartFromBeginning"
-                              },
-                              "parameters": [
-                                "ParagraphText",
-                                "AutoTyping",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ActivateBehavior"
-                              },
-                              "parameters": [
-                                "ParagraphText",
-                                "AutoTyping",
-                                "yes"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "hudSelection.currentSelection",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "SetStringVariable"
                               },
                               "parameters": [
                                 "hudSelection.currentMenu",
                                 "=",
-                                "\"normal\""
+                                "\"attack\""
                               ]
                             }
                           ]
@@ -3039,6 +3789,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Visual",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -3120,6 +3871,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Menu Animations",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -3178,6 +3930,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Moving between ACT buttons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4213,6 +4966,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Dialogue Strings",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -4222,6 +4976,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemy 0",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4231,6 +4986,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Paragraph 1",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4463,6 +5219,10 @@
     {
       "name": "Text",
       "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "TopDownMovement",
+      "type": "TopDownMovementBehavior::TopDownMovementBehavior"
     },
     {
       "name": "Tween",
