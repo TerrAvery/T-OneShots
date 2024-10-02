@@ -456,6 +456,22 @@
         "name": "assets\\sprites\\fighthud\\enemyhealth\\enemyhealthbackdrop.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/bitmap/hachicro/Hachicro.fnt",
+        "kind": "bitmapFont",
+        "metadata": "",
+        "name": "assets\\bitmap\\hachicro\\Hachicro.fnt",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/bitmap/hachicro/Hachicro.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\bitmap\\hachicro\\Hachicro.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1132,7 +1148,7 @@
       "content": {
         "text": "CHARA",
         "opacity": 255,
-        "scale": 1.5,
+        "scale": 1,
         "fontSize": 20,
         "tint": "255;255;255",
         "bitmapFontResourceName": "assets\\bitmap\\mars\\MarsNeedsCunnilingus.fnt",
@@ -1692,6 +1708,30 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "DamageText",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "text": "999",
+        "opacity": 255,
+        "scale": 4,
+        "fontSize": 20,
+        "tint": "255;0;0",
+        "bitmapFontResourceName": "assets\\bitmap\\hachicro\\Hachicro.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\hachicro\\Hachicro.png",
+        "align": "left",
+        "wordWrap": true
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1763,6 +1803,9 @@
               },
               {
                 "objectName": "ClientName"
+              },
+              {
+                "objectName": "DamageText"
               },
               {
                 "objectName": "var"

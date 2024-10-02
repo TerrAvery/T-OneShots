@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 1.0214284547756838,
+    "zoomFactor": 1.0558713594240687,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -263,7 +263,7 @@
       "width": 0,
       "x": 40,
       "y": 447,
-      "zOrder": 0,
+      "zOrder": -1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -293,9 +293,9 @@
       "name": "var",
       "persistentUuid": "e449a775-1545-49c9-95f5-c105f3f0887f",
       "width": 0,
-      "x": 19,
-      "y": 28,
-      "zOrder": 1,
+      "x": 4,
+      "y": 4,
+      "zOrder": -1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -311,7 +311,7 @@
       "width": 0,
       "x": -203,
       "y": 52,
-      "zOrder": 2,
+      "zOrder": -1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -503,7 +503,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "name": "Damage Calculation",
+                          "name": "Damage Numbers",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -512,13 +512,13 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "SceneInstancesCount"
+                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                                   },
                                   "parameters": [
-                                    "",
-                                    "EnemyHealth",
-                                    ">",
-                                    "0"
+                                    "TargetBar",
+                                    "Animation",
+                                    "=",
+                                    "\"Hit\""
                                   ]
                                 },
                                 {
@@ -531,86 +531,105 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+                                    "value": "Wait"
                                   },
                                   "parameters": [
-                                    "EnemyHealth",
-                                    "=",
-                                    "enemyStats.maxHP",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "DamageText",
+                                    "-9999",
+                                    "-9999",
                                     ""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                                   },
                                   "parameters": [
-                                    "EnemyHealth",
+                                    "DamageText",
+                                    "Text",
                                     "=",
-                                    "enemyStats.HP",
+                                    "damageAmassed.totalValue"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetCenterX"
+                                  },
+                                  "parameters": [
+                                    "DamageText",
+                                    "=",
+                                    "320"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreY"
+                                  },
+                                  "parameters": [
+                                    "DamageText",
+                                    "=",
+                                    "80"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                                  },
+                                  "parameters": [
+                                    "DamageText",
+                                    "Tween",
+                                    "\"Up\"",
+                                    "DamageText.Y() - 48",
+                                    "\"easeOutQuad\"",
+                                    "0.5",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "0.5"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                                  },
+                                  "parameters": [
+                                    "DamageText",
+                                    "Tween",
+                                    "\"Down\"",
+                                    "DamageText.Y() + 48",
+                                    "\"easeInQuad\"",
+                                    "0.5",
                                     ""
                                   ]
                                 }
                               ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
-                                  },
-                                  "parameters": [
-                                    "EnemyHealth",
-                                    ">",
-                                    "enemyStats.HP",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                                  },
-                                  "parameters": [
-                                    "EnemyHealth",
-                                    "-",
-                                    "0.45",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::Value"
-                                  },
-                                  "parameters": [
-                                    "EnemyHealth",
-                                    "<",
-                                    "enemyStats.HP",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                                  },
-                                  "parameters": [
-                                    "EnemyHealth",
-                                    "+",
-                                    "0.45",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            },
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Damage Calculation",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
@@ -862,19 +881,7 @@
                                   "parameters": [
                                     "enemyStats.HP",
                                     "-",
-                                    "ceil(damageAmassed.totalValue * 1.25)"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "EnemyHealth",
-                                    "EnemyHealth",
-                                    "320",
-                                    "80",
-                                    ""
+                                    "damageAmassed.totalValue"
                                   ]
                                 }
                               ]
