@@ -578,6 +578,151 @@
         "name": "assets\\sprites\\misc\\vfx\\spare_particle.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/papyrusidle1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\papyrusidle1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/papyrusidle2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\papyrusidle2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/papyrusidle3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\papyrusidle3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bgm/battlemusic/mu_papyrus.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\bgm\\battlemusic\\mu_papyrus.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_08.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_09.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/papyrus/expressions/papyrus_expression_11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_11.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1824,6 +1969,144 @@
               ]
             }
           ]
+        },
+        {
+          "name": "papyrusBody",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.25,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\papyrusidle1.png",
+                  "points": [
+                    {
+                      "name": "expr",
+                      "x": 54,
+                      "y": 22
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\papyrusidle2.png",
+                  "points": [
+                    {
+                      "name": "expr",
+                      "x": 54,
+                      "y": 22
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\papyrusidle3.png",
+                  "points": [
+                    {
+                      "name": "expr",
+                      "x": 54,
+                      "y": 22
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2135,6 +2418,491 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "EnemyExpr",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "papyrusRegular",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.125,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "papyrusSkeptical",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.125,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "papyrusHappy",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.125,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "papyrusSweat",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.125,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "papyrusConfident",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.125,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_08.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_09.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "papyrusHurt",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.125,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_10.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_11.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2160,10 +2928,23 @@
         "folderName": "Fight Hud",
         "children": [
           {
-            "objectName": "Slash"
+            "folderName": "Attack FX",
+            "children": [
+              {
+                "objectName": "Slash"
+              }
+            ]
           },
           {
-            "objectName": "Enemy"
+            "folderName": "Enemy",
+            "children": [
+              {
+                "objectName": "Enemy"
+              },
+              {
+                "objectName": "EnemyExpr"
+              }
+            ]
           },
           {
             "folderName": "Target",

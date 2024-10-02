@@ -245,7 +245,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Paragraph Box",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -255,7 +254,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Paragraph Box Sounds",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -286,9 +284,12 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                    "value": "BehaviorActivated"
                   },
-                  "parameters": []
+                  "parameters": [
+                    "ParagraphText",
+                    "AutoTyping"
+                  ]
                 }
               ],
               "actions": [
