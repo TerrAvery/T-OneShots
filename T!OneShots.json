@@ -758,6 +758,42 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/bones/bone3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\bones\\bone3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/bones/bone1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\bones\\bone1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/bones/bone2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\bones\\bone2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/bones/bone4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\bones\\bone4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1305,7 +1341,20 @@
       "name": "BattleBox",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "width",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "folded": true,
+          "name": "height",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [
         {
           "effectType": "Outline",
@@ -3073,6 +3122,228 @@
         "align": "left",
         "wordWrap": true
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "AttackSprite",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "vspeed",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "bone1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\bones\\bone1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bone2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\bones\\bone2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bone3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\bones\\bone3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bone4",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\bones\\bone4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 0
+                      },
+                      {
+                        "x": 10,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3083,6 +3354,14 @@
         "children": [
           {
             "objectName": "SpareDust"
+          }
+        ]
+      },
+      {
+        "folderName": "Attacks",
+        "children": [
+          {
+            "objectName": "AttackSprite"
           }
         ]
       },
@@ -3293,6 +3572,10 @@
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/spritemasking"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspritecontinuousbar"
     },
     {
@@ -3308,6 +3591,11 @@
       "referenceTo": "/eventsFunctionsExtensions/updatechecker"
     }
   ],
-  "externalLayouts": [],
+  "externalLayouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/attack1"
+    }
+  ],
   "externalSourceFiles": []
 }

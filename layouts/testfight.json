@@ -717,11 +717,128 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Battle Box",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Mask",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "hudSelection.currentMenu",
+                        "=",
+                        "\"attack\""
+                      ]
+                    }
+                  ],
+                  "actions": []
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Specific Widths and Heights",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Papyrus",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "ATK 1",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "enemyID",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "BattleBox",
+                                "width",
+                                "=",
+                                "200"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": []
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
@@ -811,6 +928,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Dialogue Bubble",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -951,6 +1069,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Dialogue",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1894,6 +2013,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Dialogue 3",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -2574,6 +2694,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Set DIalogue Starting",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2583,6 +2704,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Papyrus",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -3001,7 +3123,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Menus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3196,6 +3317,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Attack 1",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -3346,6 +3468,95 @@
                             }
                           ],
                           "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Papyrus (Enemy ID = 1)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Attack 1",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.currentMenu",
+                                        "=",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.attackOngoing",
+                                        "True",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.dialogueOngoing",
+                                        "False",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
+                                        "paragraphTextValue",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"attack1\"",
+                                        "BattleBox.X()",
+                                        "BattleBox.Y()",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
                         }
                       ],
                       "parameters": []
@@ -3355,6 +3566,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Timer",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -3522,7 +3734,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Config",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -3532,7 +3743,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Soul Movement Config",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -3763,8 +3973,8 @@
                               "parameters": [
                                 "BattleBox",
                                 "Tween",
-                                "\"BattleWidth\"",
-                                "150",
+                                "\"Width\"",
+                                "BattleBox.width",
                                 "\"linear\"",
                                 "0.5",
                                 ""

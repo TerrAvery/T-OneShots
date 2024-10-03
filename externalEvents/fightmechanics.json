@@ -245,6 +245,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Expressions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -332,6 +333,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Dialogue Sounds",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -341,6 +343,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Papyrus Sounds",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -405,6 +408,56 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "name": "Attack",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Force",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AttackSprite",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "AttackSprite",
+                    "AttackSprite.hspeed",
+                    "AttackSprite.vspeed",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
       "name": "Paragraph Box",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
