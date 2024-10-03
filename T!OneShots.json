@@ -370,7 +370,7 @@
         "metadata": "",
         "name": "assets\\bgm\\battlemusic\\mu_battle1.ogg",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
       },
@@ -612,7 +612,7 @@
         "metadata": "",
         "name": "assets\\bgm\\battlemusic\\mu_papyrus.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
       },
@@ -722,6 +722,41 @@
         "metadata": "",
         "name": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_11.png",
         "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/dialogue_bubble/dialogue_bubble1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\dialogue_bubble\\dialogue_bubble1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bitmap/papyrus/Papyrus.fnt",
+        "kind": "bitmapFont",
+        "metadata": "",
+        "name": "assets\\bitmap\\papyrus\\Papyrus.fnt",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/bitmap/papyrus/Papyrus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\bitmap\\papyrus\\Papyrus.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx/txt/snd_txtpap.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\txt\\snd_txtpap.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": true
       }
     ],
@@ -2477,6 +2512,42 @@
                       }
                     ]
                   ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\papyrus\\expressions\\papyrus_expression_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 1
+                      },
+                      {
+                        "x": 24,
+                        "y": 36
+                      },
+                      {
+                        "x": 0,
+                        "y": 36
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -2903,6 +2974,105 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "DialogueBubble",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\dialogue_bubble\\dialogue_bubble1.png",
+                  "points": [
+                    {
+                      "name": "Text",
+                      "x": 36,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 237,
+                        "y": 0
+                      },
+                      {
+                        "x": 237,
+                        "y": 104
+                      },
+                      {
+                        "x": 0,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "PapyrusDialogue",
+      "type": "BitmapText::BitmapTextObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "AutoTyping",
+          "type": "AutoTyping::AutoTyping",
+          "Text": "Text",
+          "Interval": 0.03,
+          "CharacterJustAdded": false,
+          "FullText": "",
+          "TypedText": ""
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "text": "",
+        "opacity": 255,
+        "scale": 1,
+        "fontSize": 20,
+        "tint": "0;0;0",
+        "bitmapFontResourceName": "assets\\bitmap\\papyrus\\Papyrus.fnt",
+        "textureAtlasResourceName": "assets\\bitmap\\papyrus\\Papyrus.png",
+        "align": "left",
+        "wordWrap": true
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -2927,6 +3097,14 @@
       {
         "folderName": "Fight Hud",
         "children": [
+          {
+            "folderName": "Dialogue",
+            "children": [
+              {
+                "objectName": "DialogueBubble"
+              }
+            ]
+          },
           {
             "folderName": "Attack FX",
             "children": [
@@ -3001,6 +3179,9 @@
               },
               {
                 "objectName": "DamageText"
+              },
+              {
+                "objectName": "PapyrusDialogue"
               },
               {
                 "objectName": "var"

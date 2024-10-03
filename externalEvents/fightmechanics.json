@@ -245,6 +245,166 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "name": "Expressions",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Papyrus ",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AutoTyping::AutoTyping::IsFinished"
+                  },
+                  "parameters": [
+                    "PapyrusDialogue",
+                    "AutoTyping",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                  },
+                  "parameters": [
+                    "EnemyExpr",
+                    "Animation"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AutoTyping::AutoTyping::IsFinished"
+                  },
+                  "parameters": [
+                    "PapyrusDialogue",
+                    "AutoTyping",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                  },
+                  "parameters": [
+                    "EnemyExpr",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "EnemyExpr",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Dialogue Sounds",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Papyrus Sounds",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AutoTyping::AutoTyping::HasJustTyped"
+                  },
+                  "parameters": [
+                    "PapyrusDialogue",
+                    "AutoTyping",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AutoTyping::AutoTyping::IsFinished"
+                  },
+                  "parameters": [
+                    "PapyrusDialogue",
+                    "AutoTyping",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BehaviorActivated"
+                  },
+                  "parameters": [
+                    "PapyrusDialogue",
+                    "AutoTyping"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\sfx\\txt\\snd_txtpap.wav",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "name": "Paragraph Box",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -254,6 +414,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Paragraph Box Sounds",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
