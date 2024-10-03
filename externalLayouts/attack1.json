@@ -11,7 +11,7 @@
       "name": "AttackSprite",
       "persistentUuid": "15a0fd40-5355-4d88-a7b1-4e0c304f2cab",
       "width": 0,
-      "x": 150,
+      "x": 195,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -39,7 +39,7 @@
       "name": "AttackSprite",
       "persistentUuid": "77813932-5f4d-4513-9d33-6d4fac1ba5fa",
       "width": 0,
-      "x": 161,
+      "x": 206,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -67,7 +67,7 @@
       "name": "AttackSprite",
       "persistentUuid": "59d53f45-700e-400c-a696-9bc10f05756d",
       "width": 0,
-      "x": 183,
+      "x": 228,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -95,7 +95,7 @@
       "name": "AttackSprite",
       "persistentUuid": "7c3b9efc-c5f6-47a3-b717-96ab6fd986a3",
       "width": 0,
-      "x": 172,
+      "x": 217,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -123,7 +123,7 @@
       "name": "AttackSprite",
       "persistentUuid": "7461a7c6-f3a0-40c5-9b5f-fce9797730b5",
       "width": 0,
-      "x": 249,
+      "x": 374,
       "y": 0,
       "zOrder": 2,
       "numberProperties": [
@@ -151,7 +151,7 @@
       "name": "AttackSprite",
       "persistentUuid": "44642014-2cb8-4a9b-94ed-24ab3aff1e04",
       "width": 0,
-      "x": 260,
+      "x": 385,
       "y": 0,
       "zOrder": 2,
       "numberProperties": [
@@ -179,7 +179,7 @@
       "name": "AttackSprite",
       "persistentUuid": "e1e751e2-a8d4-404a-a28f-fcf7efa7faaf",
       "width": 0,
-      "x": 282,
+      "x": 407,
       "y": 0,
       "zOrder": 2,
       "numberProperties": [
@@ -207,7 +207,7 @@
       "name": "AttackSprite",
       "persistentUuid": "dec03f45-edb5-41cd-9cf9-4def0cbd5289",
       "width": 0,
-      "x": 271,
+      "x": 396,
       "y": 0,
       "zOrder": 2,
       "numberProperties": [
@@ -235,7 +235,7 @@
       "name": "AttackSprite",
       "persistentUuid": "fe6f9694-6051-427d-a3ae-f8438f188a71",
       "width": 0,
-      "x": 398,
+      "x": 548,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -263,7 +263,7 @@
       "name": "AttackSprite",
       "persistentUuid": "9fa8b11a-5aa8-4f96-aa0f-be819bb93753",
       "width": 0,
-      "x": 409,
+      "x": 559,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -291,7 +291,7 @@
       "name": "AttackSprite",
       "persistentUuid": "b44b6141-b78a-403f-91f0-0d650c9b6a74",
       "width": 0,
-      "x": 431,
+      "x": 581,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -319,7 +319,7 @@
       "name": "AttackSprite",
       "persistentUuid": "5ebb6e40-bb32-4628-baa6-53e8c9b53f5a",
       "width": 0,
-      "x": 420,
+      "x": 570,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -347,7 +347,7 @@
       "name": "AttackSprite",
       "persistentUuid": "e5382e5c-2927-4ca1-80af-8baa2588375c",
       "width": 0,
-      "x": 442,
+      "x": 592,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -375,7 +375,7 @@
       "name": "AttackSprite",
       "persistentUuid": "f2925e3c-8156-4e2e-8281-c5020e27174c",
       "width": 0,
-      "x": 453,
+      "x": 603,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -403,7 +403,7 @@
       "name": "AttackSprite",
       "persistentUuid": "9b6222e6-e9eb-41c9-b104-6bbfb5c00439",
       "width": 0,
-      "x": 475,
+      "x": 625,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -431,7 +431,7 @@
       "name": "AttackSprite",
       "persistentUuid": "d921e1f6-f37f-4921-8ff6-45adccbe9af1",
       "width": 0,
-      "x": 464,
+      "x": 614,
       "y": 70,
       "zOrder": 2,
       "numberProperties": [
@@ -573,7 +573,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 2.0538851749962173,
+    "zoomFactor": 0.8388679565518139,
     "windowMask": false
   }
 }
