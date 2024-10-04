@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6636944769022075,
+    "zoomFactor": 0.7578450772701854,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -1260,6 +1260,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Dialogue Bubble",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1400,6 +1401,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Dialogue",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6781,7 +6783,7 @@
                               "parameters": [
                                 "paragraphTextValue",
                                 "=",
-                                "6"
+                                "8"
                               ]
                             },
                             {
@@ -6816,6 +6818,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Dialogue 10",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -7504,6 +7507,66 @@
                                 "=",
                                 "3"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "6"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "7"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "8"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "9"
+                              ]
                             }
                           ]
                         },
@@ -7840,7 +7903,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Menus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7999,7 +8061,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Misc Menus",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8270,6 +8331,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Attack 2",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8422,6 +8484,148 @@
                                         "assets\\sfx\\generic\\snd_bell.wav",
                                         "",
                                         "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Attack 3",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Timer",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "enemyID",
+                                            "=",
+                                            "1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "paragraphTextValue",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "attackTime",
+                                            "=",
+                                            "6"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.currentMenu",
+                                        "=",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.attackOngoing",
+                                        "True",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanVariable"
+                                      },
+                                      "parameters": [
+                                        "hudSelection.dialogueOngoing",
+                                        "False",
+                                        "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
+                                        "paragraphTextValue",
+                                        "=",
+                                        "2"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"papyrusATK3\"",
+                                        "BattleBox.X()",
+                                        "BattleBox.Y()",
                                         ""
                                       ]
                                     }
@@ -13285,7 +13489,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Damage",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -13295,7 +13498,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bone Colors",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13305,24 +13507,23 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Common",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AttackSprite",
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "Player1",
                         "AttackSprite",
-                        "",
-                        "",
-                        ""
+                        "color",
+                        "=",
+                        "\"normal\""
                       ]
                     },
                     {
@@ -13338,32 +13539,26 @@
                     },
                     {
                       "type": {
-                        "value": "StringObjectVariable"
+                        "value": "CollisionNP"
                       },
                       "parameters": [
+                        "Player1",
                         "AttackSprite",
-                        "color",
-                        "=",
-                        "\"normal\""
+                        "",
+                        "",
+                        ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "",
-                        "assets\\sfx\\generic\\snd_hurt1.wav",
-                        "",
-                        "",
+                        "Player1",
+                        "invincible",
+                        "True",
                         ""
                       ]
                     },
@@ -13379,12 +13574,13 @@
                     },
                     {
                       "type": {
-                        "value": "SetBooleanObjectVariable"
+                        "value": "PlaySound"
                       },
                       "parameters": [
-                        "Player1",
-                        "invincible",
-                        "True",
+                        "",
+                        "assets\\sfx\\generic\\snd_hurt1.wav",
+                        "",
+                        "",
                         ""
                       ]
                     }
@@ -13403,29 +13599,16 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AttackSprite",
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
                       },
                       "parameters": [
                         "Player1",
-                        "AttackSprite",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Player1",
-                        "invincible",
-                        "=",
-                        ""
+                        "PlatformerObject"
                       ]
                     },
                     {
@@ -13441,30 +13624,37 @@
                     },
                     {
                       "type": {
-                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "Player1",
-                        "PlatformerObject"
+                        "invincible",
+                        "=",
+                        ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Once"
+                        "value": "CollisionNP"
                       },
-                      "parameters": []
+                      "parameters": [
+                        "Player1",
+                        "AttackSprite",
+                        "",
+                        "",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "",
-                        "assets\\sfx\\generic\\snd_hurt1.wav",
-                        "",
-                        "",
+                        "Player1",
+                        "invincible",
+                        "True",
                         ""
                       ]
                     },
@@ -13480,12 +13670,13 @@
                     },
                     {
                       "type": {
-                        "value": "SetBooleanObjectVariable"
+                        "value": "PlaySound"
                       },
                       "parameters": [
-                        "Player1",
-                        "invincible",
-                        "True",
+                        "",
+                        "assets\\sfx\\generic\\snd_hurt1.wav",
+                        "",
+                        "",
                         ""
                       ]
                     }
@@ -13504,29 +13695,17 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AttackSprite",
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "inverted": true,
+                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
                       },
                       "parameters": [
                         "Player1",
-                        "AttackSprite",
-                        "",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Player1",
-                        "invincible",
-                        "=",
-                        ""
+                        "PlatformerObject"
                       ]
                     },
                     {
@@ -13542,31 +13721,37 @@
                     },
                     {
                       "type": {
-                        "inverted": true,
-                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "Player1",
-                        "PlatformerObject"
+                        "invincible",
+                        "=",
+                        ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Once"
+                        "value": "CollisionNP"
                       },
-                      "parameters": []
+                      "parameters": [
+                        "Player1",
+                        "AttackSprite",
+                        "",
+                        "",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "",
-                        "assets\\sfx\\generic\\snd_hurt1.wav",
-                        "",
-                        "",
+                        "Player1",
+                        "invincible",
+                        "True",
                         ""
                       ]
                     },
@@ -13582,12 +13767,13 @@
                     },
                     {
                       "type": {
-                        "value": "SetBooleanObjectVariable"
+                        "value": "PlaySound"
                       },
                       "parameters": [
-                        "Player1",
-                        "invincible",
-                        "True",
+                        "",
+                        "assets\\sfx\\generic\\snd_hurt1.wav",
+                        "",
+                        "",
                         ""
                       ]
                     }
@@ -13654,7 +13840,7 @@
                 "Player1",
                 "\"resetIframes\"",
                 ">=",
-                "2"
+                "1"
               ]
             },
             {

@@ -3891,6 +3891,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalLayouts/papyrusatk2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/papyrusatk3"
     }
   ],
   "externalSourceFiles": []
