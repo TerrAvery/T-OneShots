@@ -1112,6 +1112,9 @@
       "effects": [],
       "behaviors": [
         {
+          "gravity": 600,
+          "jumpSpeed": 300,
+          "jumpSustainTime": 2,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 999999,
@@ -1119,10 +1122,7 @@
           "canGrabPlatforms": false,
           "canGrabWithoutMoving": true,
           "deceleration": 999999,
-          "gravity": 750,
           "ignoreDefaultControls": false,
-          "jumpSpeed": 360,
-          "jumpSustainTime": 1,
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 720,
           "maxSpeed": 128,

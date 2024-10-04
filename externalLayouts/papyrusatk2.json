@@ -735,7 +735,7 @@
       "name": "AttackSprite",
       "persistentUuid": "af677dd2-54b7-432a-8113-dacbc4eb4b41",
       "width": 10,
-      "x": 1249,
+      "x": 1264,
       "y": 110,
       "zOrder": -1,
       "numberProperties": [
@@ -765,7 +765,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 2.385485665205252,
+    "zoomFactor": 0.4216982725724838,
     "windowMask": false
   }
 }
