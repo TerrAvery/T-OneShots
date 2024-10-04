@@ -836,6 +836,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Soul Color Changing",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1265,6 +1266,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Name Cap",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1811,6 +1813,31 @@
             "SettingsText",
             "=",
             "320"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "Player1",
+            "PlatformerObject",
+            ""
           ]
         }
       ]

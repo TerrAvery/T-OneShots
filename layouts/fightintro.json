@@ -298,6 +298,16 @@
       "actions": [
         {
           "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "Player1",
+            "PlatformerObject",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "SetCenter"
           },
           "parameters": [
