@@ -8,7 +8,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Soul Color",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -24,6 +23,17 @@
                 "singleplayerStats.soulColor",
                 "=",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
               ]
             },
             {
@@ -60,6 +70,17 @@
             },
             {
               "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -88,6 +109,17 @@
                 "singleplayerStats.soulColor",
                 "=",
                 "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
               ]
             },
             {
@@ -124,6 +156,17 @@
             },
             {
               "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -152,6 +195,17 @@
                 "singleplayerStats.soulColor",
                 "=",
                 "4"
+              ]
+            },
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
               ]
             },
             {
@@ -188,6 +242,17 @@
             },
             {
               "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -216,6 +281,17 @@
                 "singleplayerStats.soulColor",
                 "=",
                 "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Player1",
+                "soulColor",
+                "=",
+                "\"red\""
               ]
             },
             {

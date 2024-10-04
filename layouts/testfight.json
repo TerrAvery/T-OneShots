@@ -365,12 +365,216 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
+          "name": "Battle Box Mask",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SpriteMasking::Mask"
+                  },
+                  "parameters": [
+                    "",
+                    "AttackSprite",
+                    "BattleBoxMask",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "hudSelection.currentMenu",
+                    "=",
+                    "\"attack\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "hudSelection.attackOngoing",
+                    "False",
+                    "\"attack\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "hudSelection.dialogueOngoing",
+                    "False",
+                    "\"attack\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "BattleBoxMask"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "AttackSprite"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "hudSelection.currentMenu",
+                    "=",
+                    "\"attack\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "hudSelection.attackOngoing",
+                    "True",
+                    "\"attack\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "hudSelection.dialogueOngoing",
+                    "False",
+                    "\"attack\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "BattleBoxMask",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "AttackSprite",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BattleBoxMask",
+                    "9999",
+                    "9999",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "BattleBoxMask",
+                    "Resizable",
+                    "=",
+                    "BattleBox.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "BattleBoxMask",
+                    "=",
+                    "BattleBox.X()",
+                    "=",
+                    "BattleBox.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "BattleBoxMask",
+                    "Resizable",
+                    "=",
+                    "BattleBox.Height()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "name": "Player Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -412,9 +616,21 @@
                       ]
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "PlatformerObject",
+                        ""
+                      ]
+                    }
+                  ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -537,6 +753,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -658,6 +875,70 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "soulColor",
+                        "=",
+                        "\"blue\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangeColor"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "\"0;60;255\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "PlatformerObject",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -717,6 +998,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Battle Box",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -726,6 +1008,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Mask",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -754,6 +1037,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Specific Widths and Heights",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -928,6 +1212,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Dialogue Bubble",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3296,6 +3581,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Attacks",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -3305,6 +3591,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "TestMonster (Enemy ID = 0)",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -3324,6 +3611,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Timer",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -3366,7 +3654,7 @@
                                           "parameters": [
                                             "attackTime",
                                             "=",
-                                            "5"
+                                            "8"
                                           ]
                                         }
                                       ]
@@ -3471,6 +3759,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Papyrus (Enemy ID = 1)",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -3744,73 +4033,6 @@
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": true,
-                                    "value": "StringVariable"
-                                  },
-                                  "parameters": [
-                                    "hudSelection.currentMenu",
-                                    "=",
-                                    "\"attack\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ActivateBehavior"
-                                  },
-                                  "parameters": [
-                                    "Player1",
-                                    "TopDownMovement",
-                                    "no"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "StringVariable"
-                                  },
-                                  "parameters": [
-                                    "hudSelection.currentMenu",
-                                    "=",
-                                    "\"attack\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ActivateBehavior"
-                                  },
-                                  "parameters": [
-                                    "Player1",
-                                    "TopDownMovement",
-                                    "yes"
-                                  ]
-                                }
-                              ]
-                            },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
@@ -4127,7 +4349,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "FIGHT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6399,7 +6620,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Visual",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -7047,7 +7267,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Visual",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -7188,7 +7407,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Moving between ACT buttons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7710,7 +7928,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Visual",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8233,6 +8450,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "TestMonster (Enemy ID = 0)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8376,6 +8594,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Papyrus (Enemy ID = 1)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8427,7 +8646,7 @@
                       "parameters": [
                         "enemyStats.checkDesc",
                         "=",
-                        "\"He likes to say: 'Nyeh heh heh!'\""
+                        "\"Willing to do anything to join the Royal Guard.\""
                       ]
                     },
                     {
@@ -8607,7 +8826,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "TestMonster (Enemy ID = 0)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9073,6 +9291,14 @@
     {
       "name": "Opacity",
       "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "Platform",
+      "type": "PlatformBehavior::PlatformBehavior"
+    },
+    {
+      "name": "PlatformerObject",
+      "type": "PlatformBehavior::PlatformerObjectBehavior"
     },
     {
       "name": "Resizable",

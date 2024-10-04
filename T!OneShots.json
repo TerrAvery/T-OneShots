@@ -794,6 +794,15 @@
         "name": "assets\\sprites\\attacks\\bones\\bone4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/battlebox/battlebox_mask.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\battlebox\\battlebox_mask.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1097,6 +1106,26 @@
       "effects": [],
       "behaviors": [
         {
+          "acceleration": 999999,
+          "canGoDownFromJumpthru": false,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 999999,
+          "gravity": 750,
+          "ignoreDefaultControls": false,
+          "jumpSpeed": 360,
+          "jumpSustainTime": 1,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 720,
+          "maxSpeed": 128,
+          "name": "PlatformerObject",
+          "slopeMaxAngle": 60,
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "useLegacyTrajectory": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        },
+        {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
         }
@@ -1370,6 +1399,13 @@
         }
       ],
       "behaviors": [
+        {
+          "canBeGrabbed": false,
+          "name": "Platform",
+          "platformType": "NormalPlatform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "yGrabOffset": 0
+        },
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
@@ -3344,6 +3380,97 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BattleBoxMask",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "width",
+          "type": "number",
+          "value": 150
+        },
+        {
+          "folded": true,
+          "name": "height",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": -256,
+            "thickness": 6
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\sprites\\battlebox\\battlebox_mask.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 33,
+                        "y": 0
+                      },
+                      {
+                        "x": 33,
+                        "y": 33
+                      },
+                      {
+                        "x": 0,
+                        "y": 33
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3422,6 +3549,9 @@
             "children": [
               {
                 "objectName": "BattleBox"
+              },
+              {
+                "objectName": "BattleBoxMask"
               }
             ]
           },
@@ -3526,6 +3656,12 @@
         {
           "folded": true,
           "name": "soulColor",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "soulTransfo",
           "type": "number",
           "value": 0
         },
