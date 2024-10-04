@@ -821,6 +821,26 @@
         "name": "assets\\sprites\\enemies\\papyrus\\introsprite\\papyrusIntro2.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/sfx/generic/snd_hurt1.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\generic\\snd_hurt1.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sfx/generic/snd_bell.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\generic\\snd_bell.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
