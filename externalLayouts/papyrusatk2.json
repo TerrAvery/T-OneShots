@@ -1,0 +1,771 @@
+{
+  "associatedLayout": "TestFight",
+  "name": "papyrusATK2",
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "f1da457a-b01e-4aac-aa9d-c154edef2a3d",
+      "width": 0,
+      "x": 295,
+      "y": 110,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "7e84f876-f5b5-4aec-8a14-78c97a37f86a",
+      "width": 10,
+      "x": 306,
+      "y": 101,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "c862fbd4-cd0e-45df-8b01-e4dae3ff096c",
+      "width": 10,
+      "x": 317,
+      "y": 90,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "d992c0d9-de12-4b88-983c-d1157a8e861c",
+      "width": 10,
+      "x": 328,
+      "y": 80,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "2e8c2e32-c50c-4438-bda3-053d99914124",
+      "width": 10,
+      "x": 339,
+      "y": 70,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "d62fffb6-8176-472f-9b85-5bb22fda9179",
+      "width": 0,
+      "x": 752,
+      "y": 110,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "72829ffd-4bdc-46a8-b9ff-f200ed8a4312",
+      "width": 10,
+      "x": 763,
+      "y": 101,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "d8c7faf1-db9e-464a-b6c4-109a49713adb",
+      "width": 10,
+      "x": 774,
+      "y": 90,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "f22829f1-9a01-4a76-995b-68b99df0323b",
+      "width": 10,
+      "x": 785,
+      "y": 80,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "1927ac6c-07a8-4690-8160-26ca236bdab3",
+      "width": 10,
+      "x": 796,
+      "y": 70,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "fa966cdc-c478-4296-bbab-1fc3028f4023",
+      "width": 0,
+      "x": 535,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "373b9323-50bf-4d90-a31c-2ef910eee1a0",
+      "width": 10,
+      "x": 546,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "a1daa941-93cf-4e33-b660-89a5fc12e8e3",
+      "width": 10,
+      "x": 557,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "30cb0b4e-9888-45ee-a7f1-530f2ba7b9ab",
+      "width": 10,
+      "x": 568,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "9a7ff991-4555-493f-aa3d-d548e500508b",
+      "width": 10,
+      "x": 579,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "ea348e2b-7d56-4b27-bf5c-b203a929e3b9",
+      "width": 10,
+      "x": 952,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "04555afe-c931-4168-bf95-f78dd042d58f",
+      "width": 10,
+      "x": 963,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "f1e5321e-24a9-4969-9ecd-bb39a1926243",
+      "width": 10,
+      "x": 985,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "eb83f481-0b7e-4da7-b366-189b062d3896",
+      "width": 10,
+      "x": 974,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "4658ea2d-bfef-4556-b0bf-64505fe7e6c7",
+      "width": 10,
+      "x": 996,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "6d527f0a-dc81-4c51-b909-ffe403b10fcd",
+      "width": 10,
+      "x": 1007,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "bd69cb57-b1b3-4a51-8eee-7169be2ef375",
+      "width": 10,
+      "x": 1029,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 130,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "33cbda7c-30ed-4e8e-8e02-049802a1b15d",
+      "width": 10,
+      "x": 1018,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "blue"
+        },
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -160
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 109,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "f208a8a2-56e8-4975-b885-a38af5fe8b85",
+      "width": 10,
+      "x": 1289,
+      "y": 0,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -192
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AttackSprite",
+      "persistentUuid": "af677dd2-54b7-432a-8113-dacbc4eb4b41",
+      "width": 10,
+      "x": 1249,
+      "y": 110,
+      "zOrder": -1,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": -180
+        }
+      ]
+    }
+  ],
+  "editionSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 2.385485665205252,
+    "windowMask": false
+  }
+}

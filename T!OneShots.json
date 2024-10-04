@@ -1101,11 +1101,19 @@
           "name": "soulColor",
           "type": "string",
           "value": "red"
+        },
+        {
+          "folded": true,
+          "name": "invincible",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
       "behaviors": [
         {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 999999,
           "canGoDownFromJumpthru": false,
           "canGrabPlatforms": false,
@@ -1118,9 +1126,7 @@
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 720,
           "maxSpeed": 128,
-          "name": "PlatformerObject",
           "slopeMaxAngle": 60,
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "useLegacyTrajectory": false,
           "xGrabTolerance": 10,
           "yGrabOffset": 0
@@ -1400,10 +1406,10 @@
       ],
       "behaviors": [
         {
-          "canBeGrabbed": false,
           "name": "Platform",
-          "platformType": "NormalPlatform",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
           "yGrabOffset": 0
         },
         {
@@ -3177,6 +3183,18 @@
           "name": "vspeed",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "invincible",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "normal"
         }
       ],
       "effects": [],
@@ -3708,6 +3726,10 @@
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/flash"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/spritemasking"
     },
     {
@@ -3730,7 +3752,11 @@
   "externalLayouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/attack1"
+      "referenceTo": "/externalLayouts/papyrusatk1"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/papyrusatk2"
     }
   ],
   "externalSourceFiles": []
