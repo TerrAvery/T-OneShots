@@ -886,6 +886,45 @@
         "name": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_03.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/sfx/generic/snd_amalgam.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sfx\\generic\\snd_amalgam.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/sixbones/bonesForm/sixbonesIdle_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\sixbones\\bonesForm\\sixbonesIdle_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bgm/battlemusic/mu_sixbones_intro.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\bgm\\battlemusic\\mu_sixbones_intro.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bgm/battlemusic/mu_sixbones_loop.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\bgm\\battlemusic\\mu_sixbones_loop.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2532,6 +2571,54 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sixBones",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\sixbones\\bonesForm\\sixbonesIdle_00.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",

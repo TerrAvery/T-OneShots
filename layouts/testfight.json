@@ -809,19 +809,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SceneInstancesCount"
-                      },
-                      "parameters": [
-                        "",
-                        "AttackSprite",
-                        ">=",
-                        "1"
-                      ]
-                    }
-                  ],
+                  "conditions": [],
                   "actions": [
                     {
                       "type": {
@@ -931,6 +919,17 @@
                         "paragraphTextValue",
                         ">",
                         "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "AttackSprite",
+                        ">=",
+                        "1"
                       ]
                     }
                   ],
@@ -8007,6 +8006,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Misc Menus",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8124,6 +8124,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Papyrus (Enemy ID = 1)",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -8607,6 +8608,380 @@
                                       ]
                                     }
                                   ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "folded": true,
+                          "name": "SIXBONES (Enemy ID = 2)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "folded": true,
+                              "name": "Attack 1",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Timer",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "enemyID",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "paragraphTextValue",
+                                            "=",
+                                            "0"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "attackTime",
+                                            "=",
+                                            "2"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                }
+                              ],
+                              "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "folded": true,
+                              "name": "Attack 2",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Timer",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "enemyID",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "paragraphTextValue",
+                                            "=",
+                                            "1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "attackTime",
+                                            "=",
+                                            "2"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                }
+                              ],
+                              "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Attack 3",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Timer",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "enemyID",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "paragraphTextValue",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "attackTime",
+                                            "=",
+                                            "4"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                },
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Config",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "enemyID",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "paragraphTextValue",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Wait"
+                                          },
+                                          "parameters": [
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlaySound"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "assets\\sfx\\generic\\snd_amalgam.ogg",
+                                            "",
+                                            "",
+                                            "RandomFloatInRange(1,1.15)"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                          },
+                                          "parameters": [
+                                            "Enemy",
+                                            "Animation",
+                                            "=",
+                                            "\"sixBones\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "Wait"
+                                          },
+                                          "parameters": [
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlaySoundCanal"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "assets\\bgm\\battlemusic\\mu_sixbones_intro.ogg",
+                                            "0",
+                                            "",
+                                            "",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "Wait"
+                                          },
+                                          "parameters": [
+                                            "26.38"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlaySoundCanal"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "assets\\bgm\\battlemusic\\mu_sixbones_loop.ogg",
+                                            "0",
+                                            "yes",
+                                            "",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
                                 }
                               ],
                               "parameters": []
@@ -9157,7 +9532,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "FIGHT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9167,6 +9541,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Config",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -9251,6 +9626,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Dust the enemy on <= 0 HP",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -9354,6 +9730,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Target Bar Movement",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -9363,6 +9740,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Damage Numbers",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9515,6 +9893,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Damage Calculation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9620,6 +9999,116 @@
                                 "textG": 0,
                                 "textR": 0
                               },
+                              "comment": "Calculate"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "Distance"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    "CenterCheck",
+                                    "12",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "CenterX"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    "<",
+                                    "Target.CenterX()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    "Tween",
+                                    "\"Move\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "damageAmassed.barDistance",
+                                    "+",
+                                    "0.25"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "Distance"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    "CenterCheck",
+                                    "12",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "CenterX"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    ">",
+                                    "Target.CenterX()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "TargetBar",
+                                    "Tween",
+                                    "\"Move\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "damageAmassed.barDistance",
+                                    "-",
+                                    "0.25"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
                               "comment": "Target Bar Stuff"
                             },
                             {
@@ -9673,7 +10162,7 @@
                                   "parameters": [
                                     "damageAmassed.totalValue",
                                     "=",
-                                    "round((singleplayerStats.weaponATK + singleplayerStats.ATK - singleplayerStats.DEF + damageAmassed.randomDecimal) * (1 - TargetBar.Distance(CenterCheck )/ Target.Width()) * 2)"
+                                    "round(damageAmassed.barDistance + (singleplayerStats.ATK + singleplayerStats.weaponATK) / enemyStats.DEF * 2)"
                                   ]
                                 }
                               ]
@@ -9741,97 +10230,6 @@
                                     "damageAmassed.randomDecimal",
                                     "=",
                                     "RandomFloatInRange(0,1)"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                  },
-                                  "parameters": [
-                                    "TargetBar",
-                                    "Animation",
-                                    "=",
-                                    "\"Hit\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Distance"
-                                  },
-                                  "parameters": [
-                                    "TargetBar",
-                                    "CenterCheck",
-                                    "12",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "damageAmassed.barDistance",
-                                    "=",
-                                    "2.2"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                  },
-                                  "parameters": [
-                                    "TargetBar",
-                                    "Animation",
-                                    "=",
-                                    "\"Hit\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "inverted": true,
-                                    "value": "Distance"
-                                  },
-                                  "parameters": [
-                                    "TargetBar",
-                                    "CenterCheck",
-                                    "12",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "damageAmassed.barDistance",
-                                    "=",
-                                    "TargetBar.Distance(CenterCheck )/ Target.Width() * 2"
                                   ]
                                 }
                               ]
@@ -10289,6 +10687,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Selecting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -13967,6 +14366,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Battle VFX",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -13976,6 +14376,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Sixbones (Enemy ID = 2)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14533,7 +14934,7 @@
                       "parameters": [
                         "enemyStats.DEF",
                         "=",
-                        "9999"
+                        "999"
                       ]
                     },
                     {
@@ -14543,7 +14944,7 @@
                       "parameters": [
                         "enemyStats.HP",
                         "=",
-                        "320"
+                        "999999999"
                       ]
                     },
                     {
@@ -14553,7 +14954,7 @@
                       "parameters": [
                         "enemyStats.maxHP",
                         "=",
-                        "320"
+                        "999999999"
                       ]
                     }
                   ]
@@ -15091,6 +15492,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Paragraph 1",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15145,6 +15547,225 @@
                         "Text",
                         "=",
                         "\"* It's foggy.\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Paragraph 2",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "hudSelection.currentMenu",
+                        "=",
+                        "\"normal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "paragraphTextValue",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "ParagraphText",
+                        "Text",
+                        "=",
+                        "\"* The mist starts to irritate your nose.\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Paragraph 3",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "hudSelection.currentMenu",
+                        "=",
+                        "\"normal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "paragraphTextValue",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "ParagraphText",
+                        "Text",
+                        "=",
+                        "\"* Can't breathe.\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Paragraph 4",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "hudSelection.currentMenu",
+                        "=",
+                        "\"normal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "paragraphTextValue",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "ParagraphText",
+                        "Text",
+                        "=",
+                        "\"* Sixbones.\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "enemyName",
+                        "=",
+                        "\"||||||\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "enemyStats.checkDesc",
+                        "=",
+                        "\"It's unrecognizable.\""
                       ]
                     }
                   ]
