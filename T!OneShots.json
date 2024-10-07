@@ -841,6 +841,51 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/misc/vfx/spr_labfog.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\misc\\vfx\\spr_labfog.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/sixbones/blobForm/sixblobIdle_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/sixbones/blobForm/sixblobIdle_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_01.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/sixbones/blobForm/sixblobIdle_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/enemies/sixbones/blobForm/sixblobIdle_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_03.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2367,6 +2412,162 @@
               ]
             }
           ]
+        },
+        {
+          "name": "sixBlob",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.5,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\enemies\\sixbones\\blobForm\\sixblobIdle_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 0
+                      },
+                      {
+                        "x": 83,
+                        "y": 104
+                      },
+                      {
+                        "x": 5,
+                        "y": 104
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3623,16 +3824,40 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 480,
+      "name": "labFog",
+      "texture": "assets\\sprites\\misc\\vfx\\spr_labfog.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 640,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
       {
-        "folderName": "Particles",
+        "folderName": "VFX",
         "children": [
           {
-            "objectName": "SpareDust"
+            "folderName": "Tiled Effects",
+            "children": [
+              {
+                "objectName": "labFog"
+              }
+            ]
+          },
+          {
+            "folderName": "Particles",
+            "children": [
+              {
+                "objectName": "SpareDust"
+              }
+            ]
           }
         ]
       },

@@ -26,7 +26,7 @@
     {
       "name": "enemyID",
       "type": "number",
-      "value": 1
+      "value": 2
     },
     {
       "folded": true,
@@ -809,7 +809,19 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "AttackSprite",
+                        ">=",
+                        "1"
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -7414,7 +7426,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Set DIalogue Starting",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -7592,72 +7603,6 @@
                     }
                   ],
                   "parameters": []
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "folded": true,
-              "name": "Specific Attack Bubbles",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringVariable"
-                      },
-                      "parameters": [
-                        "hudSelection.currentMenu",
-                        "=",
-                        "\"attack\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "hudSelection.dialogueOngoing",
-                        "False",
-                        "\"attack\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "paragraphTextValue",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "hudSelection.dialogueOngoing",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
                 }
               ],
               "parameters": []
@@ -7903,6 +7848,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Menus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8296,6 +8242,16 @@
                                         "value": "NumberVariable"
                                       },
                                       "parameters": [
+                                        "enemyID",
+                                        "=",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
                                         "paragraphTextValue",
                                         "=",
                                         "0"
@@ -8439,6 +8395,16 @@
                                         "value": "NumberVariable"
                                       },
                                       "parameters": [
+                                        "enemyID",
+                                        "=",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
                                         "paragraphTextValue",
                                         "=",
                                         "1"
@@ -8497,6 +8463,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Attack 3",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8597,6 +8564,16 @@
                                         "hudSelection.dialogueOngoing",
                                         "False",
                                         "\"attack\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
+                                        "enemyID",
+                                        "=",
+                                        "1"
                                       ]
                                     },
                                     {
@@ -10802,7 +10779,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "ACT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10921,124 +10897,242 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Check Code",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Regular",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
                                     {
-                                      "type": {
-                                        "value": "StringVariable"
-                                      },
-                                      "parameters": [
-                                        "hudSelection.currentMenu",
-                                        "=",
-                                        "\"checkingEnemy\""
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"checkingEnemy\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": true,
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "enemyID",
+                                            "=",
+                                            "2"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Cache"
+                                          },
+                                          "parameters": [
+                                            "Player1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ActivateBehavior"
+                                          },
+                                          "parameters": [
+                                            "ParagraphText",
+                                            "AutoTyping",
+                                            "yes"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "AutoTyping::AutoTyping::RestartFromBeginning"
+                                          },
+                                          "parameters": [
+                                            "ParagraphText",
+                                            "AutoTyping",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                                          },
+                                          "parameters": [
+                                            "ParagraphText",
+                                            "Text",
+                                            "=",
+                                            "\"* \" + enemyName + \" - ATK \" + enemyStats.ATK + \" DEF \" + enemyStats.DEF + NewLine() + \"* \" + enemyStats.checkDesc"
+                                          ]
+                                        }
                                       ]
                                     },
                                     {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Once"
-                                      },
-                                      "parameters": []
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"checkingEnemy\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "AutoTyping::AutoTyping::IsFinished"
+                                          },
+                                          "parameters": [
+                                            "ParagraphText",
+                                            "AutoTyping",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "KeyPressed"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "z"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetStringVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.currentMenu",
+                                            "=",
+                                            "\"attack\""
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "Cache"
-                                      },
-                                      "parameters": [
-                                        "Player1"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "ActivateBehavior"
-                                      },
-                                      "parameters": [
-                                        "ParagraphText",
-                                        "AutoTyping",
-                                        "yes"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AutoTyping::AutoTyping::RestartFromBeginning"
-                                      },
-                                      "parameters": [
-                                        "ParagraphText",
-                                        "AutoTyping",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                                      },
-                                      "parameters": [
-                                        "ParagraphText",
-                                        "Text",
-                                        "=",
-                                        "\"* \" + enemyName + \" - ATK \" + enemyStats.ATK + \" DEF \" + enemyStats.DEF + NewLine() + \"* \" + enemyStats.checkDesc"
-                                      ]
-                                    }
-                                  ]
+                                  "parameters": []
                                 },
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Enemy-Specific",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
                                     {
-                                      "type": {
-                                        "value": "StringVariable"
-                                      },
-                                      "parameters": [
-                                        "hudSelection.currentMenu",
-                                        "=",
-                                        "\"checkingEnemy\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AutoTyping::AutoTyping::IsFinished"
-                                      },
-                                      "parameters": [
-                                        "ParagraphText",
-                                        "AutoTyping",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "KeyPressed"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "z"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Once"
-                                      },
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Sixbones (Enemy ID = 2)",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"checkingEnemy\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "Cache"
+                                              },
+                                              "parameters": [
+                                                "Player1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "ActivateBehavior"
+                                              },
+                                              "parameters": [
+                                                "ParagraphText",
+                                                "AutoTyping",
+                                                "yes"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "AutoTyping::AutoTyping::RestartFromBeginning"
+                                              },
+                                              "parameters": [
+                                                "ParagraphText",
+                                                "AutoTyping",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                                              },
+                                              "parameters": [
+                                                "ParagraphText",
+                                                "Text",
+                                                "=",
+                                                "\"* \" + enemyName + \" - ATK |||| DEF ||||\" + NewLine() + \"* \" + enemyStats.checkDesc"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
                                       "parameters": []
                                     }
                                   ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetStringVariable"
-                                      },
-                                      "parameters": [
-                                        "hudSelection.currentMenu",
-                                        "=",
-                                        "\"attack\""
-                                      ]
-                                    }
-                                  ]
+                                  "parameters": []
                                 }
                               ],
                               "parameters": []
@@ -13489,6 +13583,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Damage",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -13872,7 +13967,126 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
+      "name": "Battle VFX",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Sixbones (Enemy ID = 2)",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Fog",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "labFog",
+                        "labFog",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "labFog",
+                        "+",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::YOffset"
+                      },
+                      "parameters": [
+                        "labFog",
+                        "+",
+                        "0.1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "labFog",
+                        "0",
+                        "0",
+                        "\"Overlay\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "labFog",
+                        "Opacity",
+                        "=",
+                        "220"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "name": "Enemy Config",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -14026,6 +14240,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Papyrus (Enemy ID = 1)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14035,6 +14250,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Config",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14130,6 +14346,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Sprites",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14239,6 +14456,190 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Sixbones (Enemy ID = 2)",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Config",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "enemyName",
+                        "=",
+                        "\"???\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "enemyStats.checkDesc",
+                        "=",
+                        "\"It's just a blob.\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "enemyStats.ATK",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "enemyStats.DEF",
+                        "=",
+                        "9999"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "enemyStats.HP",
+                        "=",
+                        "320"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "enemyStats.maxHP",
+                        "=",
+                        "320"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Sprites",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Scale",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetCenterX"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "=",
+                        "320"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Animation",
+                        "=",
+                        "\"sixBlob\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
         }
       ],
       "parameters": []
@@ -14248,7 +14649,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Dialogue Strings (Paragraph 1's ID is 0)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -14678,6 +15078,84 @@
           "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Sixbones (Enemy ID = 2)",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Paragraph 1",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "hudSelection.currentMenu",
+                        "=",
+                        "\"normal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "enemyID",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "paragraphTextValue",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "ParagraphText",
+                        "Text",
+                        "=",
+                        "\"* It's foggy.\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -14709,6 +15187,7 @@
       "parameters": []
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -14924,6 +15403,39 @@
           "width": 0
         }
       ],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Overlay",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
       "effects": [
         {
           "effectType": "Scene3D::HemisphereLight",
