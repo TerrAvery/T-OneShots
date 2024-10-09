@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 1.0214284547756847,
+    "zoomFactor": 0.6073449929427395,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -342,9 +342,25 @@
       "name": "PapyrusDialogue",
       "persistentUuid": "8f23353c-9077-4363-af9a-f9d1b7c942a9",
       "width": 184,
-      "x": 149,
-      "y": 22,
+      "x": -480,
+      "y": -480,
       "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 80,
+      "layer": "",
+      "name": "SixbonesDialogue",
+      "persistentUuid": "cd2dd4d2-9f2d-405f-9a63-70510b87a83c",
+      "width": 184,
+      "x": -480,
+      "y": -640,
+      "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -375,6 +391,7 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -401,7 +418,6 @@
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -469,6 +485,17 @@
                                 "-",
                                 "4"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -494,6 +521,17 @@
                                 "Player1",
                                 "+",
                                 "4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
                               ]
                             }
                           ]
@@ -521,6 +559,17 @@
                                 "+",
                                 "4"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -546,6 +595,17 @@
                                 "Player1",
                                 "-",
                                 "4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
                               ]
                             }
                           ]
@@ -591,6 +651,17 @@
                                 "-",
                                 "2"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -616,6 +687,17 @@
                                 "Player1",
                                 "+",
                                 "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
                               ]
                             }
                           ]
@@ -643,6 +725,17 @@
                                 "+",
                                 "2"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -669,7 +762,87 @@
                                 "-",
                                 "2"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player1",
+                                "moving",
+                                "True",
+                                ""
+                              ]
                             }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "moving",
+                            "True",
+                            "\"red\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Down"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Up"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "moving",
+                            "False",
+                            ""
                           ]
                         }
                       ]
@@ -735,6 +908,81 @@
                             "PlatformerObject",
                             "yes"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "PlatformerObject",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "moving",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player1",
+                            "moving",
+                            "False",
+                            ""
+                          ]
                         }
                       ]
                     }
@@ -798,6 +1046,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Battle Box",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1044,6 +1293,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "SIXBONES",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -1053,7 +1303,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "ATK 4 [Random 1[",
+                      "name": "ATK 4 [Random 1]",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
@@ -1106,7 +1356,7 @@
                                 "BattleBox",
                                 "width",
                                 "=",
-                                "320"
+                                "180"
                               ]
                             }
                           ]
@@ -1198,7 +1448,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "ATK 1",
+                      "name": "ATK 2",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
@@ -1312,7 +1562,7 @@
                     "\"RegularWidth\"",
                     "564",
                     "\"linear\"",
-                    "0.5",
+                    "0.35",
                     ""
                   ]
                 },
@@ -1326,7 +1576,7 @@
                     "\"RegularHeight\"",
                     "130",
                     "\"linear\"",
-                    "0.5",
+                    "0.35",
                     ""
                   ]
                 },
@@ -1340,7 +1590,7 @@
                     "\"RegularPos\"",
                     "255",
                     "\"linear\"",
-                    "0.5",
+                    "0.35",
                     ""
                   ]
                 }
@@ -1393,12 +1643,30 @@
                     },
                     {
                       "type": {
-                        "value": "AutoTyping::AutoTyping::IsFinished"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "PapyrusDialogue",
-                        "AutoTyping",
-                        "="
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "AutoTyping::AutoTyping::IsFinished"
+                          },
+                          "parameters": [
+                            "PapyrusDialogue",
+                            "AutoTyping",
+                            "="
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AutoTyping::AutoTyping::IsFinished"
+                          },
+                          "parameters": [
+                            "SixbonesDialogue",
+                            "AutoTyping",
+                            "="
+                          ]
+                        }
                       ]
                     },
                     {
@@ -1495,7 +1763,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Dialogue",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1514,7 +1781,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Dialogue 0 (Intro)",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -7499,6 +7765,185 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "SIXBONES",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Dialogue 1",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.dialogueOngoing",
+                                "True",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "enemyID",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "dialogueValue",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "SixbonesDialogue",
+                                "Text",
+                                "=",
+                                "\"a EE em, m t9i hUE\n\nEE HH? ? ?[[\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\sfx\\generic\\mus_dialup_5.wav",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.dialogueOngoing",
+                                "True",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "enemyID",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "dialogueValue",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.dialogueOngoing",
+                                "False",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
@@ -7508,10 +7953,86 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Set DIalogue Starting",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "SIXBONES",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.currentMenu",
+                            "=",
+                            "\"attack\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.dialogueOngoing",
+                            "False",
+                            "\"attack\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "enemyID",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "paragraphTextValue",
+                            "=",
+                            "3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "hudSelection.dialogueOngoing",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
                 {
                   "colorB": 228,
                   "colorG": 176,
@@ -7730,6 +8251,14 @@
                       "parameters": [
                         "PapyrusDialogue"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "SixbonesDialogue"
+                      ]
                     }
                   ]
                 },
@@ -7812,13 +8341,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Spawn",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7916,6 +8443,60 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "enemyID",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "SixbonesDialogue",
+                            "=",
+                            "DialogueBubble.PointX(\"Text\")",
+                            "=",
+                            "DialogueBubble.PointY(\"Text\")"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "SixbonesDialogue",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "SixbonesDialogue",
+                            "=",
+                            "DialogueBubble.ZOrder() + 1"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -7930,6 +8511,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Menus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8205,6 +8787,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Papyrus (Enemy ID = 1)",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -8214,7 +8797,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Attack 1",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8224,7 +8806,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Timer",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -8368,7 +8949,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Attack 2",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8544,7 +9124,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Attack 3",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8709,6 +9288,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Intro Segment",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -9112,7 +9692,112 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
-                                      "folded": true,
+                                      "name": "Soul Color Change",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.dialogueOngoing",
+                                                "False",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.attackOngoing",
+                                                "True",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "paragraphTextValue",
+                                                "=",
+                                                "3"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "Wait"
+                                              },
+                                              "parameters": [
+                                                "4"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "PlaySound"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "assets\\sfx\\generic\\snd_bell.wav",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player1",
+                                                "soulColor",
+                                                "=",
+                                                "\"red\""
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    },
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
                                       "name": "Timer",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -9165,7 +9850,7 @@
                                               "parameters": [
                                                 "attackTime",
                                                 "=",
-                                                "8"
+                                                "12"
                                               ]
                                             }
                                           ]
@@ -9466,6 +10151,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Soul Movement Config",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9669,7 +10355,7 @@
                                 "\"Width\"",
                                 "BattleBox.width",
                                 "\"linear\"",
-                                "0.5",
+                                "0.35",
                                 ""
                               ]
                             }
@@ -11469,6 +12155,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "ACT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14387,15 +15074,6 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
-                      },
-                      "parameters": [
-                        "Player1",
-                        "PlatformerObject"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
@@ -14403,6 +15081,17 @@
                         "color",
                         "=",
                         "\"blue\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "moving",
+                        "True",
+                        ""
                       ]
                     },
                     {
@@ -14483,12 +15172,13 @@
                   "conditions": [
                     {
                       "type": {
-                        "inverted": true,
-                        "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "Player1",
-                        "PlatformerObject"
+                        "moving",
+                        "False",
+                        ""
                       ]
                     },
                     {
@@ -14625,12 +15315,6 @@
                 ">=",
                 "1"
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
@@ -14777,6 +15461,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Enemy Config",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -15340,7 +16025,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Dialogue Strings (Paragraph 1's ID is 0)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
