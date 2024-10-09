@@ -798,7 +798,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Battle Box",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -808,6 +807,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Battle Box Mask",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1039,6 +1039,84 @@
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "SIXBONES",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "ATK 4 [Random 1[",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "hudSelection.currentMenu",
+                                "=",
+                                "\"attack\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "paragraphTextValue",
+                                "=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "enemyID",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "BattleBox",
+                                "width",
+                                "=",
+                                "320"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
+                },
                 {
                   "colorB": 228,
                   "colorG": 176,
@@ -7852,7 +7930,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Menus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8128,7 +8205,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Papyrus (Enemy ID = 1)",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -8633,8 +8709,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
-                              "name": "Attack 1",
+                              "name": "Intro Segment",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
@@ -8643,217 +8718,75 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "name": "Timer",
+                                  "folded": true,
+                                  "name": "Attack 1",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Timer",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
                                         {
-                                          "type": {
-                                            "value": "StringVariable"
-                                          },
-                                          "parameters": [
-                                            "hudSelection.currentMenu",
-                                            "=",
-                                            "\"attack\""
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "paragraphTextValue",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "attackTime",
+                                                "=",
+                                                "2"
+                                              ]
+                                            }
                                           ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "enemyID",
-                                            "=",
-                                            "2"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "paragraphTextValue",
-                                            "=",
-                                            "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::Once"
-                                          },
-                                          "parameters": []
                                         }
                                       ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberVariable"
-                                          },
-                                          "parameters": [
-                                            "attackTime",
-                                            "=",
-                                            "2"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "parameters": []
-                                }
-                              ],
-                              "parameters": []
-                            },
-                            {
-                              "colorB": 228,
-                              "colorG": 176,
-                              "colorR": 74,
-                              "creationTime": 0,
-                              "folded": true,
-                              "name": "Attack 2",
-                              "source": "",
-                              "type": "BuiltinCommonInstructions::Group",
-                              "events": [
-                                {
-                                  "colorB": 228,
-                                  "colorG": 176,
-                                  "colorR": 74,
-                                  "creationTime": 0,
-                                  "name": "Timer",
-                                  "source": "",
-                                  "type": "BuiltinCommonInstructions::Group",
-                                  "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "StringVariable"
-                                          },
-                                          "parameters": [
-                                            "hudSelection.currentMenu",
-                                            "=",
-                                            "\"attack\""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "enemyID",
-                                            "=",
-                                            "2"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "paragraphTextValue",
-                                            "=",
-                                            "1"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::Once"
-                                          },
-                                          "parameters": []
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberVariable"
-                                          },
-                                          "parameters": [
-                                            "attackTime",
-                                            "=",
-                                            "2"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "parameters": []
-                                }
-                              ],
-                              "parameters": []
-                            },
-                            {
-                              "colorB": 228,
-                              "colorG": 176,
-                              "colorR": 74,
-                              "creationTime": 0,
-                              "name": "Attack 3",
-                              "source": "",
-                              "type": "BuiltinCommonInstructions::Group",
-                              "events": [
-                                {
-                                  "colorB": 228,
-                                  "colorG": 176,
-                                  "colorR": 74,
-                                  "creationTime": 0,
-                                  "name": "Timer",
-                                  "source": "",
-                                  "type": "BuiltinCommonInstructions::Group",
-                                  "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "StringVariable"
-                                          },
-                                          "parameters": [
-                                            "hudSelection.currentMenu",
-                                            "=",
-                                            "\"attack\""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "enemyID",
-                                            "=",
-                                            "2"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "paragraphTextValue",
-                                            "=",
-                                            "2"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::Once"
-                                          },
-                                          "parameters": []
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberVariable"
-                                          },
-                                          "parameters": [
-                                            "attackTime",
-                                            "=",
-                                            "4"
-                                          ]
-                                        }
-                                      ]
+                                      "parameters": []
                                     }
                                   ],
                                   "parameters": []
@@ -8863,10 +8796,383 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "name": "Config",
+                                  "folded": true,
+                                  "name": "Attack 2",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Timer",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "paragraphTextValue",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "attackTime",
+                                                "=",
+                                                "2"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "parameters": []
+                                },
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "folded": true,
+                                  "name": "Attack 3 [Actual Battle Start]",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Timer",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "paragraphTextValue",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "attackTime",
+                                                "=",
+                                                "4"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    },
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Config",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "paragraphTextValue",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "Wait"
+                                              },
+                                              "parameters": [
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "PlaySound"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "assets\\sfx\\generic\\snd_amalgam.ogg",
+                                                "",
+                                                "",
+                                                "RandomFloatInRange(1,1.15)"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                              },
+                                              "parameters": [
+                                                "Enemy",
+                                                "Animation",
+                                                "=",
+                                                "\"sixbonesReform\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "Wait"
+                                              },
+                                              "parameters": [
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                              },
+                                              "parameters": [
+                                                "Enemy",
+                                                "Animation",
+                                                "=",
+                                                "\"sixBones\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "PlaySoundCanal"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "assets\\bgm\\battlemusic\\mu_sixbones_intro.ogg",
+                                                "0",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "Wait"
+                                              },
+                                              "parameters": [
+                                                "46.545"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "PlaySoundCanal"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "assets\\bgm\\battlemusic\\mu_sixbones_loop.ogg",
+                                                "0",
+                                                "yes",
+                                                "",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "parameters": []
+                                }
+                              ],
+                              "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Random Attacks",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Attack 4",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "folded": true,
+                                      "name": "Timer",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringVariable"
+                                              },
+                                              "parameters": [
+                                                "hudSelection.currentMenu",
+                                                "=",
+                                                "\"attack\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "enemyID",
+                                                "=",
+                                                "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "paragraphTextValue",
+                                                "=",
+                                                "3"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "attackTime",
+                                                "=",
+                                                "8"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
@@ -8892,12 +9198,32 @@
                                         },
                                         {
                                           "type": {
+                                            "value": "BooleanVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.attackOngoing",
+                                            "True",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BooleanVariable"
+                                          },
+                                          "parameters": [
+                                            "hudSelection.dialogueOngoing",
+                                            "False",
+                                            "\"attack\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
                                             "value": "NumberVariable"
                                           },
                                           "parameters": [
                                             "paragraphTextValue",
                                             "=",
-                                            "2"
+                                            "3"
                                           ]
                                         },
                                         {
@@ -8910,10 +9236,14 @@
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "Wait"
+                                            "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
                                           },
                                           "parameters": [
-                                            "2"
+                                            "",
+                                            "\"sixbonesATK1\"",
+                                            "BattleBox.X()",
+                                            "BattleBox.Y()",
+                                            ""
                                           ]
                                         },
                                         {
@@ -8922,63 +9252,21 @@
                                           },
                                           "parameters": [
                                             "",
-                                            "assets\\sfx\\generic\\snd_amalgam.ogg",
+                                            "assets\\sfx\\generic\\snd_bell.wav",
                                             "",
                                             "",
-                                            "RandomFloatInRange(1,1.15)"
+                                            ""
                                           ]
                                         },
                                         {
                                           "type": {
-                                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                            "value": "SetStringObjectVariable"
                                           },
                                           "parameters": [
-                                            "Enemy",
-                                            "Animation",
+                                            "Player1",
+                                            "soulColor",
                                             "=",
-                                            "\"sixBones\""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "Wait"
-                                          },
-                                          "parameters": [
-                                            "2"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PlaySoundCanal"
-                                          },
-                                          "parameters": [
-                                            "",
-                                            "assets\\bgm\\battlemusic\\mu_sixbones_intro.ogg",
-                                            "0",
-                                            "",
-                                            "",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "Wait"
-                                          },
-                                          "parameters": [
-                                            "46.545"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PlaySoundCanal"
-                                          },
-                                          "parameters": [
-                                            "",
-                                            "assets\\bgm\\battlemusic\\mu_sixbones_loop.ogg",
-                                            "0",
-                                            "yes",
-                                            "",
-                                            ""
+                                            "\"blue\""
                                           ]
                                         }
                                       ]
@@ -13984,7 +14272,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Damage",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -14865,6 +15152,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Sixbones (Enemy ID = 2)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -15052,6 +15340,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Dialogue Strings (Paragraph 1's ID is 0)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -15628,6 +15917,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Paragraph 3",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15694,6 +15984,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Paragraph 4",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
