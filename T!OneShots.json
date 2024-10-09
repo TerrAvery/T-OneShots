@@ -1023,6 +1023,96 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_01.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_03.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_04.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_05.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_06.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_07.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_07.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_08.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_08.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/attacks/sixbones/bite/papyrusBite_09.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_09.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4575,6 +4665,473 @@
         "align": "left",
         "wordWrap": true
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "FreakAttack",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "hspeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "vspeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "invincible",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "color",
+          "type": "string",
+          "value": "normal"
+        },
+        {
+          "name": "randomValue",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "spawn",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_00.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "attack",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.041666666666666664,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_07.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_08.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_09.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 4
+                      },
+                      {
+                        "x": 23,
+                        "y": 26
+                      },
+                      {
+                        "x": 10,
+                        "y": 26
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -4606,6 +5163,9 @@
         "children": [
           {
             "objectName": "AttackSprite"
+          },
+          {
+            "objectName": "FreakAttack"
           }
         ]
       },
@@ -4818,6 +5378,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/testfight"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/test"
     }
   ],
   "externalEvents": [

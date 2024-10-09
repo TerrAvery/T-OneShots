@@ -583,7 +583,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Attack",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -598,72 +597,164 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "AttackSprite",
-              "conditions": [
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "FreakAttack",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "AttackSprite",
-                    "color",
-                    "=",
-                    "\"blue\""
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "FreakAttack",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "FreakAttack",
+                        "color",
+                        "=",
+                        "\"blue\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "FreakAttack",
+                        "\"30;199;250\""
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "AttackSprite",
-                    "\"30;199;250\""
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "FreakAttack",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "FreakAttack",
+                        "color",
+                        "=",
+                        "\"orange\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "FreakAttack",
+                        "\"250;146;10\""
+                      ]
+                    }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "AttackSprite",
-              "conditions": [
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "AttackSprite",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "AttackSprite",
-                    "color",
-                    "=",
-                    "\"orange\""
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AttackSprite",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "AttackSprite",
+                        "color",
+                        "=",
+                        "\"blue\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "AttackSprite",
+                        "\"30;199;250\""
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "AttackSprite",
-                    "\"250;146;10\""
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AttackSprite",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "AttackSprite",
+                        "color",
+                        "=",
+                        "\"orange\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "AttackSprite",
+                        "\"250;146;10\""
+                      ]
+                    }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
