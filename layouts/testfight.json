@@ -385,6 +385,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Player Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1044,6 +1045,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Battle Box",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9632,139 +9634,6 @@
                                   ]
                                 }
                               ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::ForEach",
-                              "object": "FreakAttack",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                  },
-                                  "parameters": [
-                                    "FreakAttack",
-                                    "Animation",
-                                    "=",
-                                    "\"spawn\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "OpacityCapability::OpacityBehavior::Value"
-                                  },
-                                  "parameters": [
-                                    "FreakAttack",
-                                    "Opacity",
-                                    "=",
-                                    "255"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "FreakAttack",
-                                    "randomValue",
-                                    "=",
-                                    "RandomInRange(0,2)"
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::ForEach",
-                                  "object": "FreakAttack",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "FreakAttack",
-                                        "randomValue",
-                                        "=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetStringObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "FreakAttack",
-                                        "color",
-                                        "=",
-                                        "\"normal\""
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::ForEach",
-                                  "object": "FreakAttack",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "FreakAttack",
-                                        "randomValue",
-                                        "=",
-                                        "1"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetStringObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "FreakAttack",
-                                        "color",
-                                        "=",
-                                        "\"blue\""
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::ForEach",
-                                  "object": "FreakAttack",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "FreakAttack",
-                                        "randomValue",
-                                        "=",
-                                        "2"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetStringObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "FreakAttack",
-                                        "color",
-                                        "=",
-                                        "\"orange\""
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
                             }
                           ],
                           "parameters": []
@@ -15270,12 +15139,6 @@
                 "False",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
@@ -15288,6 +15151,15 @@
                 "Opacity",
                 "=",
                 "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveObjectTimer"
+              },
+              "parameters": [
+                "Player1",
+                "\"flashFrame\""
               ]
             }
           ]
@@ -15483,6 +15355,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Common",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15594,7 +15467,7 @@
                             "value": "StringObjectVariable"
                           },
                           "parameters": [
-                            "AttackSprite",
+                            "FreakAttack",
                             "color",
                             "=",
                             "\"normal\""
@@ -15636,13 +15509,9 @@
                         },
                         {
                           "type": {
-                            "value": "Sprite"
+                            "value": "BuiltinCommonInstructions::Once"
                           },
-                          "parameters": [
-                            "FreakAttack",
-                            "<",
-                            "2"
-                          ]
+                          "parameters": []
                         }
                       ],
                       "actions": [
@@ -15692,6 +15561,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Blue",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15864,16 +15734,6 @@
                             "=",
                             "\"attack\""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "Sprite"
-                          },
-                          "parameters": [
-                            "FreakAttack",
-                            "<",
-                            "2"
-                          ]
                         }
                       ],
                       "actions": [
@@ -15923,6 +15783,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Orange",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15984,6 +15845,12 @@
                             "",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
                         }
                       ],
                       "actions": [
@@ -16096,13 +15963,9 @@
                         },
                         {
                           "type": {
-                            "value": "Sprite"
+                            "value": "BuiltinCommonInstructions::Once"
                           },
-                          "parameters": [
-                            "FreakAttack",
-                            "<",
-                            "2"
-                          ]
+                          "parameters": []
                         }
                       ],
                       "actions": [
@@ -16151,6 +16014,73 @@
           "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Invincibility",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "invincible",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "invincible",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16184,6 +16114,7 @@
           ]
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -16207,9 +16138,33 @@
                 ">=",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "RemoveObjectTimer"
+              },
+              "parameters": [
+                "Player1",
+                "\"flashFrame\""
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveObjectTimer"
+              },
+              "parameters": [
+                "Player1",
+                "\"resetIframes\""
+              ]
+            },
             {
               "type": {
                 "value": "SetBooleanObjectVariable"
@@ -16219,6 +16174,17 @@
                 "invincible",
                 "False",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Player1",
+                "Opacity",
+                "=",
+                "255"
               ]
             }
           ]
@@ -16917,7 +16883,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Dialogue Strings (Paragraph 1's ID is 0)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -17670,7 +17635,7 @@
                 "var",
                 "Text",
                 "=",
-                "hudSelection.currentMenu + \" \" + hudSelection.currentSelection + \" \" + hudSelection.page + NewLine() + \"amassed atk: \" + damageAmassed.totalValue + NewLine() + \"bar distance calculated: \" + damageAmassed.barDistance  + NewLine() + \"random decimal: \" + damageAmassed.randomDecimal + NewLine() + \"Monster HP: \" + enemyStats.HP + NewLine() + hudSelection.attackOngoing + NewLine() + \"Dialogue Value: \" + dialogueValue + NewLine() + \"DialogueOngoing: \" + hudSelection.dialogueOngoing + NewLine() + \"AttackOngoing: \" + hudSelection.attackOngoing"
+                "hudSelection.currentMenu + \" \" + hudSelection.currentSelection + \" \" + hudSelection.page + NewLine() + \"amassed atk: \" + damageAmassed.totalValue + NewLine() + \"bar distance calculated: \" + damageAmassed.barDistance  + NewLine() + \"random decimal: \" + damageAmassed.randomDecimal + NewLine() + \"Monster HP: \" + enemyStats.HP + NewLine() + hudSelection.attackOngoing + NewLine() + \"Dialogue Value: \" + dialogueValue + NewLine() + \"DialogueOngoing: \" + hudSelection.dialogueOngoing + NewLine() + \"AttackOngoing: \" + hudSelection.attackOngoing + NewLine() + \"invincible: \" + Player1.invincible"
               ]
             }
           ]
@@ -17679,7 +17644,6 @@
       "parameters": []
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {

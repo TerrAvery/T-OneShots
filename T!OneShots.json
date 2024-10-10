@@ -4720,7 +4720,7 @@
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_00.png",
                   "points": [],
                   "originPoint": {
@@ -4768,7 +4768,7 @@
               "timeBetweenFrames": 0.041666666666666664,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_01.png",
                   "points": [],
                   "originPoint": {
@@ -4804,7 +4804,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_02.png",
                   "points": [],
                   "originPoint": {
@@ -4840,7 +4840,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_03.png",
                   "points": [],
                   "originPoint": {
@@ -4876,7 +4876,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_04.png",
                   "points": [],
                   "originPoint": {
@@ -4912,7 +4912,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_05.png",
                   "points": [],
                   "originPoint": {
@@ -4948,7 +4948,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_06.png",
                   "points": [],
                   "originPoint": {
@@ -4984,7 +4984,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_07.png",
                   "points": [],
                   "originPoint": {
@@ -5020,7 +5020,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_08.png",
                   "points": [],
                   "originPoint": {
@@ -5056,7 +5056,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_09.png",
                   "points": [],
                   "originPoint": {
@@ -5092,7 +5092,7 @@
                   ]
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\sprites\\attacks\\sixbones\\bite\\papyrusBite_01.png",
                   "points": [],
                   "originPoint": {
@@ -5378,10 +5378,6 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/testfight"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/test"
     }
   ],
   "externalEvents": [
